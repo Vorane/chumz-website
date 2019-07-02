@@ -14,6 +14,15 @@ import adviceIcon from "../../assets/icons/advice.png";
 import consistentIcon from "../../assets/icons/consistent.png";
 import mobileIcon from "../../assets/icons/mobile.png";
 
+import anniversaryImage from "../../assets/images/categories/anniversary.png";
+import cookerImage from "../../assets/images/categories/cooker.png";
+import graduationImage from "../../assets/images/categories/graduation.png";
+import rainydayImage from "../../assets/images/categories/rainyday.png";
+import tripImage from "../../assets/images/categories/trip.png";
+import gymImage from "../../assets/images/categories/gym.png";
+import healthcareImage from "../../assets/images/categories/healthcare.png";
+import speakersImage from "../../assets/images/categories/speakers.png";
+
 import styled from "styled-components";
 
 const HomeContainer = styled.section``;
@@ -22,7 +31,7 @@ const BannerSection = styled.section`
   background-image: url(${bannerBackground});
   background-size: cover;
   background-position-x: left;
-  color:#121212
+  color: #121212;
 `;
 
 const ChumzName = styled.h1`
@@ -59,7 +68,10 @@ const Home = () => {
                   low as Kes 5
                 </p>
                 <p className="mt-4">
-                  <a href="https://play.google.com/store/app/details?id=com.chumz.app" className="">
+                  <a
+                    href="https://play.google.com/store/app/details?id=com.chumz.app"
+                    className=""
+                  >
                     <img alt="image" height="60" src={googlePlayIcon} />
                   </a>
                 </p>
@@ -138,7 +150,10 @@ const Home = () => {
                 dream.
               </p>
               <p className="mt-4">
-                <a href="https://play.google.com/store/app/details?id=com.chumz.app" className="btn btn-secondary">
+                <a
+                  href="https://play.google.com/store/app/details?id=com.chumz.app"
+                  className="btn btn-secondary"
+                >
                   Start saving
                 </a>
               </p>
@@ -152,16 +167,109 @@ const Home = () => {
       </section>
 
       <section class="fdb-block">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-12 text-left">
-              <h1>Showcase</h1>
+        <div class="container-fluid">
+          <div class="row text-center">
+            <div class="col-12">
+              <h1>There is a saving plan for everyone</h1>
               <p class="lead" />
             </div>
           </div>
 
+          <div class="row text-left justify-content-center mt-5">
+            <div class="col-6 col-sm-3 pt-5 pt-sm-0">
+              <img
+                alt="image"
+                class="img-fluid rounded"
+                src={anniversaryImage}
+              />
+              <h3>
+                <strong>Loved ones</strong>
+              </h3>
+            </div>
+            <div class="col-6 col-sm-3 pt-5 pt-sm-0">
+              <img
+                alt="image"
+                class="img-fluid rounded"
+                src={graduationImage}
+              />
+              <h3>
+                <strong>Education</strong>
+              </h3>
+            </div>
+
+            <div class="col-6 col-sm-3 pt-5 pt-sm-0">
+              <img alt="image" class="img-fluid rounded" src={cookerImage} />
+              <h3>
+                <strong>Home appliances</strong>
+              </h3>
+            </div>
+
+            <div class="col-6 col-sm-3 pt-5 pt-sm-0">
+              <img alt="image" class="img-fluid rounded" src={rainydayImage} />
+              <h3>
+                <strong>unexpected events</strong>
+              </h3>
+            </div>
+          </div>
+          <div class="row text-left justify-content-center mt-5">
+            <div class="col-6 col-sm-3 pt-5 pt-sm-0">
+              <img alt="image" class="img-fluid rounded" src={gymImage} />
+              <h3>
+                <strong>Self Improvement</strong>
+              </h3>
+            </div>
+            <div class="col-6 col-sm-3 pt-5 pt-sm-0">
+              <img
+                alt="image"
+                class="img-fluid rounded"
+                src={healthcareImage}
+              />
+              <h3>
+                <strong>Wellness</strong>
+              </h3>
+            </div>
+
+            <div class="col-6 col-sm-3 pt-5 pt-sm-0">
+              <img alt="image" class="img-fluid rounded" src={speakersImage} />
+              <h3>
+                <strong>Entertainment</strong>
+              </h3>
+            </div>
+
+            <div class="col-6 col-sm-3 pt-5 pt-sm-0">
+              <img alt="image" class="img-fluid rounded" src={tripImage} />
+              <h3>
+                <strong>Adventure</strong>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fdb-block">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 text-left">
+              <h1>Showcase</h1>
+
+              <p className="lead">
+                With mobile phone on the raise a majority of people in the
+                emerging markets unbanked Chumz is building an easier way of the
+                unbanked to get the ability to save their funds.
+              </p>
+              <p className="lead">
+                Chumz enables anyone to create a goal and save as little as Kes
+                5 to their savings account.
+              </p>
+              <p className="lead">
+                The service guides the user on how to make more savings through
+                research based behavioural psychology mechanism and through a
+                user friendly navigation experience
+              </p>
+            </div>
+          </div>
+
           <div class="row text-left mt-5">
-            <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto mr-md-auto ml-md-0">
+            <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto mr-md-auto ml-md-0 pt-5 pt-md-0">
               <img alt="image" class="img-fluid rounded" src={trackingImage} />
               <h3>
                 <strong>Tracking</strong>
