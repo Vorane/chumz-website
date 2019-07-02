@@ -1,0 +1,35 @@
+/* you'll need this CSS somewhere */
+
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 250ms ease-in;
+}
+
+/*new fade*/
+
+.fade2-appear, .fade2-enter {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.fade2-appear-active, .fade2-enter-active {
+    transition: 0.3s ease-in;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.fade2-exit {
+    transition: 0.3s ease-out;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.fade2-exit-active {
+    opacity: 0;
+    transform: translateY(10px);
+}
