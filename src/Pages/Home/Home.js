@@ -7,7 +7,7 @@ import freedomImage from "../../assets/images/freedom.png";
 import trackingImage from "../../assets/images/showcase/tracking.png";
 import presetsImage from "../../assets/images/showcase/presets.png";
 import leaderboardImage from "../../assets/images/showcase/leaderboard.png";
-import bannerImage from "../../assets/images/banner.svg";
+import bannerBackground from "../../assets/images/bannerbackground.png";
 
 import accessibleIcon from "../../assets/icons/accessible.png";
 import adviceIcon from "../../assets/icons/advice.png";
@@ -16,15 +16,23 @@ import mobileIcon from "../../assets/icons/mobile.png";
 
 import styled from "styled-components";
 
-const HomeContainer = styled.section`
-  background-image: url(${bannerImage});
-`;
+const HomeContainer = styled.section``;
+const HeaderSection = styled.section``;
 const BannerSection = styled.section`
-  background-image: url(${bannerImage});
+  background-image: url(${bannerBackground});
+  background-size: cover;
+  background-position-x: left;
+  color:#121212
 `;
 
 const ChumzName = styled.h1`
-  color: white;
+  color: #3d3d3d;
+  font-weight: 900;
+`;
+const ValueProposition = styled.h1`
+  font-size: 4em;
+  font-weight: 900;
+  color: #2196f3;
 `;
 
 const FeaturesSection = styled.section`
@@ -39,32 +47,34 @@ const FeaturesHeaderText = styled.h1`
 const Home = () => {
   return (
     <HomeContainer>
-      <BannerSection className="fdb-block">
-        <div className="container align-items-end justify-content-center d-flex">
-          <div className="row align-items-top text-left">
-            <div className="col-12 col-md-6 col-lg-5">
-              <ChumzName>Chumz</ChumzName>
-              <h1>Build a saving culture</h1>
-              <p className="lead">
-                Chumz : enabling you to reach your savings goal by starting as
-                low as Kes 5
-              </p>
-              <p className="mt-4">
-                <a href="https://www.froala.com" className="">
-                  <img alt="image" height="40" src={googlePlayIcon} />
-                </a>
-              </p>
-            </div>
+      <HeaderSection className="fdb-block">
+        <BannerSection className="fdb-block">
+          <div className="container align-items-end justify-content-center d-flex">
+            <div className="row align-items-center text-left">
+              <div className="col-xs-12 col-sm-7">
+                <ChumzName>Chumz</ChumzName>
+                <ValueProposition>Build a saving culture</ValueProposition>
+                <p className="lead">
+                  Chumz : enabling you to reach your savings goal by starting as
+                  low as Kes 5
+                </p>
+                <p className="mt-4">
+                  <a href="https://play.google.com/store/app/details?id=com.chumz.app" className="">
+                    <img alt="image" height="60" src={googlePlayIcon} />
+                  </a>
+                </p>
+              </div>
 
-            <div className="col-12 col-sm-4 col-md-6 col-lg-4 m-auto pt-5">
-              <img
-                alt="image"
-                className="img-fluid rounded-0"
-                src={phonebanner}
-              />
+              <div className="col-xs-12 col-sm-4">
+                <img
+                  alt="image"
+                  className="img-fluid rounded-0"
+                  src={phonebanner}
+                />
+              </div>
             </div>
           </div>
-        </div>
+        </BannerSection>
 
         <FeaturesSection className="fdb-block">
           <div className="container">
@@ -113,7 +123,7 @@ const Home = () => {
             </div>
           </div>
         </FeaturesSection>
-      </BannerSection>
+      </HeaderSection>
 
       <section className="fdb-block">
         <div className="container align-items-center justify-content-center d-flex">
@@ -128,7 +138,7 @@ const Home = () => {
                 dream.
               </p>
               <p className="mt-4">
-                <a href="https://www.froala.com" className="btn btn-secondary">
+                <a href="https://play.google.com/store/app/details?id=com.chumz.app" className="btn btn-secondary">
                   Start saving
                 </a>
               </p>
