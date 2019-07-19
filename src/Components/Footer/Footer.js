@@ -21,20 +21,22 @@ const Footer = () => {
           <div class="col-12 col-lg-4 text-lg-left">© 2019 Chumz</div>
 
           <div class="col-12 col-lg-4 mt-4 mt-lg-0">
-            <img alt="image" src={pigIcon} height="40" />
+            <NavLink to="/home" replace>
+              <img alt="image" src={pigIcon} height="40" />
+            </NavLink>
           </div>
 
           <div class="col-12 col-lg-4 text-lg-right mt-4 mt-lg-0">
             <ul class="nav justify-content-lg-end justify-content-center">
-              <NavLink to="/contact" className="nav-item">
+              <NavLink to="/contact" replace className="nav-item">
                 <a className="nav-link">Contact</a>
               </NavLink>
 
-              <NavLink to="/contact" className="nav-item">
+              <NavLink to="/contact" replace className="nav-item">
                 <a className="nav-link">About</a>
               </NavLink>
 
-              <NavLink to="/policy" className="nav-item">
+              <NavLink to="/policy" replace className="nav-item">
                 <a className="nav-link">Privacy Policy</a>
               </NavLink>
             </ul>

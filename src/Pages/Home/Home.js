@@ -8,6 +8,7 @@ import trackingImage from "../../assets/images/showcase/tracking.png";
 import presetsImage from "../../assets/images/showcase/presets.png";
 import leaderboardImage from "../../assets/images/showcase/leaderboard.png";
 import bannerBackground from "../../assets/images/bannerbackground.png";
+import chumzLogo from "../../assets/images/chumzlogo.png";
 
 import accessibleIcon from "../../assets/icons/accessible.png";
 import adviceIcon from "../../assets/icons/advice.png";
@@ -41,7 +42,7 @@ const ChumzName = styled.h1`
 const ValueProposition = styled.h1`
   font-size: 4em;
   font-weight: 900;
-  color: #2196f3;
+  color: #cc3300;
 `;
 
 const FeaturesSection = styled.section`
@@ -53,15 +54,29 @@ const FeaturesHeaderText = styled.h1`
   padding-bottom: 20px;
 `;
 
+const FeatureDescription = styled.p`
+  color: #3d3d3d;
+`;
+
+const CTAContainer = styled.div`
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000033;
+  color: white;
+`;
+
 const Home = () => {
   return (
     <HomeContainer>
       <HeaderSection className="fdb-block">
         <BannerSection className="fdb-block">
-          <div className="container align-items-end justify-content-center d-flex">
-            <div className="row align-items-center text-left">
+          <div className="container align-items-end d-flex">
+            <div className="row align-items-center justify-content-center text-left">
               <div className="col-xs-12 col-sm-7">
-                <ChumzName>Chumz</ChumzName>
+                <img alt="image" height="60" src={chumzLogo} />
                 <ValueProposition>Build a saving culture</ValueProposition>
                 <p className="lead">
                   Chumz : enabling you to reach your savings goal by starting as
@@ -72,7 +87,7 @@ const Home = () => {
                     href="https://play.google.com/store/app/details?id=com.chumz.app"
                     className=""
                   >
-                    <img alt="image" height="60" src={googlePlayIcon} />
+                    <img alt="image" height="80" src={googlePlayIcon} />
                   </a>
                 </p>
               </div>
@@ -101,7 +116,9 @@ const Home = () => {
                 <h3>
                   <strong>Accessible</strong>
                 </h3>
-                <p>Save any amount as low as kes 5 in a fun way.</p>
+                <FeatureDescription>
+                  Save any amount as low as kes 5 in a fun way.
+                </FeatureDescription>
               </div>
 
               <div className="col-12 col-sm-6 col-lg-3 pt-4 pt-sm-0">
@@ -109,7 +126,9 @@ const Home = () => {
                 <h3>
                   <strong>Consistency</strong>
                 </h3>
-                <p>Create and track savings goals for different saving plans</p>
+                <FeatureDescription>
+                  Create and track savings goals for different saving plans
+                </FeatureDescription>
               </div>
 
               <div className="col-12 col-sm-6 col-lg-3 pt-4 pt-lg-0">
@@ -117,9 +136,9 @@ const Home = () => {
                 <h3>
                   <strong>Support</strong>
                 </h3>
-                <p>
+                <FeatureDescription>
                   Receive frequent advice and tips on how to meet your goals.
-                </p>
+                </FeatureDescription>
               </div>
 
               <div className="col-12 col-sm-6 col-lg-3 pt-4 pt-lg-0">
@@ -127,10 +146,10 @@ const Home = () => {
                 <h3>
                   <strong>Easy</strong>
                 </h3>
-                <p>
+                <FeatureDescription>
                   Begin from anywhere and anytime by saving money from your
                   mobile money instantly
-                </p>
+                </FeatureDescription>
               </div>
             </div>
           </div>
@@ -140,7 +159,7 @@ const Home = () => {
       <section className="fdb-block">
         <div className="container align-items-center justify-content-center d-flex">
           <div className="row align-items-center text-left">
-            <div className="col-12 col-lg-5 ml-auto pt-5 pt-lg-0">
+            <div className="col-12 col-sm-5 ml-auto pt-5 pt-lg-0">
               <h1>Freedom is priceless</h1>
               <p className="lead">
                 Achieve the goals, milestones you set out for yourself today.
@@ -152,14 +171,14 @@ const Home = () => {
               <p className="mt-4">
                 <a
                   href="https://play.google.com/store/app/details?id=com.chumz.app"
-                  className="btn btn-secondary"
+                  className="btn btn-secondary btn-large"
                 >
-                  Start saving
+                  <h2>Start saving</h2>
                 </a>
               </p>
             </div>
 
-            <div className="col-12 col-sm-6">
+            <div className="col-12 col-sm-7">
               <img alt="image" className="img-fluid" src={freedomImage} />
             </div>
           </div>
@@ -245,6 +264,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section class="fdb-block">
         <div class="container">
           <div class="row justify-content-center">
@@ -269,7 +289,7 @@ const Home = () => {
           </div>
 
           <div class="row text-left mt-5">
-            <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto mr-md-auto ml-md-0 pt-5 pt-md-0">
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3  mr-md-auto ml-md-0 pt-5 pt-md-0">
               <img alt="image" class="img-fluid rounded" src={trackingImage} />
               <h3>
                 <strong>Tracking</strong>
@@ -280,7 +300,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto pt-5 pt-md-0">
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3  pt-5 pt-md-0">
               <img alt="image" class="img-fluid rounded" src={presetsImage} />
               <h3>
                 <strong>Curated Goals</strong>
@@ -291,7 +311,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto ml-md-auto mr-md-0 pt-5 pt-md-0">
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3  ml-md-auto mr-md-0 pt-5 pt-md-0">
               <img
                 alt="image"
                 class="img-fluid rounded"
@@ -302,9 +322,7 @@ const Home = () => {
               </h3>
               <p>Compete with other users to gain an edge and stand to win.</p>
             </div>
-          </div>
-          <div class="row text-left mt-5">
-            <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto mr-md-auto ml-md-0">
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3  mr-md-auto ml-md-0">
               <img alt="image" class="img-fluid rounded" src={trackingImage} />
               <h3>
                 <strong>Tracking</strong>
@@ -316,6 +334,32 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="fdb-block">
+        <CTAContainer className="container">
+          <div className="row justify-content-center align-items-center">
+            <div className="col-xs-6 col-sm-4">
+              <h2>Ready to get started?</h2>
+            </div>
+            <div className="col-xs-6 col-sm-4">
+              <p>
+                Start saving today and be on trackto your dream of financial
+                freedom
+              </p>
+            </div>
+            <div className="col-xs-12 col-sm-4">
+              <p className="mt-4">
+                <a
+                  href="https://play.google.com/store/app/details?id=com.chumz.app"
+                  className="btn btn-secondary btn-large"
+                >
+                  <h2>Start saving</h2>
+                </a>
+              </p>
+            </div>
+          </div>
+        </CTAContainer>
       </section>
     </HomeContainer>
   );

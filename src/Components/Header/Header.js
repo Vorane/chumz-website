@@ -28,6 +28,16 @@ const NavItem = styled.li`
   list-style-type: none;
   padding: 10px;
 `;
+const NavButton = styled.li`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  list-style-type: none;
+  padding: 10px;
+`;
 
 const NavLink = props => (
   <NavItem>
@@ -61,7 +71,7 @@ class Header extends Component {
         <div className="container-fluid">
           <Nav className=" row navbar navbar-expand-md">
             <IconLink to="/home" className="navbar-brand">
-              <NavLink to="/home">
+              <NavLink to="/home" replace>
                 <Icon src={basketIcon} />
               </NavLink>
             </IconLink>
@@ -84,22 +94,31 @@ class Header extends Component {
               id="navbarNav3"
             >
               <ul className="navbar-nav ml-auto">
-                <NavLink to="/Home" className="nav-item nav-link">
+                <NavLink to="/Home" replace className="nav-item nav-link">
                   <a className="nav-link" onClick={this._onToggleNav}>
                     Home
                   </a>
                 </NavLink>
 
-                <NavLink to="/contact" className="nav-item nav-link">
-                  <a className="nav-link" onClick={this._onToggleNav}>
-                    Contact
-                  </a>
-                </NavLink>
-                <NavLink to="/about" className="nav-item nav-link">
+                <NavLink to="/about" replace className="nav-item nav-link">
                   <a className="nav-link" onClick={this._onToggleNav}>
                     About
                   </a>
                 </NavLink>
+                <NavLink to="/contact" replace className="nav-item nav-link">
+                  <a className="nav-link" onClick={this._onToggleNav}>
+                    Contact
+                  </a>
+                </NavLink>
+                <NavButton>
+                  <a
+                    href="https://play.google.com/store/app/details?id=com.chumz.app"
+                    className="btn btn-secondary btn-large"
+                    target="blank"
+                  >
+                    Start saving
+                  </a>
+                </NavButton>
               </ul>
             </div>
           </Nav>

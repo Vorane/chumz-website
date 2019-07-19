@@ -1,11 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import {
   HashRouter as Router,
   Switch,
   Route,
   Link,
-  Redirect
+  Redirect,
+  withRouter
 } from "react-router-dom";
 import styled from "styled-components";
 
@@ -29,42 +30,58 @@ const Content = styled(Fill)`
   text-align: center;
 `;
 
+class ScrollToTop extends Component {
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0);
+    }
+  }
+
+  render() {
+    return this.props.children;
+  }
+}
+
+const ScrollToTopContainer = withRouter(ScrollToTop);
+
 const PageRouter = () => (
   <Router>
-    <Route
-      render={({ location }) => (
-        <Fill>
-          <Route exact path="/" render={() => <Redirect to="/home" />} />
+    <ScrollToTopContainer>
+      <Route
+        render={({ location }) => (
+          <Fill>
+            <Route exact path="/" render={() => <Redirect to="/home" />} />
 
-          <Header />
+            <Header />
 
-          <Content>
-            <TransitionGroup>
-              {/* no different than other usage of
+            <Content>
+              <TransitionGroup>
+                {/* no different than other usage of
                 CSSTransition, just make sure to pass
                 `location` to `Switch` so it can match
                 the old location as it animates out
-            */}
-              <CSSTransition
-                key={location.key}
-                classNames="fade2"
-                timeout={300}
-              >
-                <Switch location={location}>
-                  <Route exact path="/home" component={Home} />
-                  <Route exact path="/contact" component={Home} />
-                  <Route exact path="/about" component={About} />
-                  <Route exact path="/policy" component={Policy} />
+              */}
+                <CSSTransition
+                  key={location.key}
+                  classNames="fade2"
+                  timeout={300}
+                >
+                  <Switch location={location}>
+                    <Route exact path="/home" component={Home} />
+                    <Route exact path="/contact" component={Home} />
+                    <Route exact path="/about" component={About} />
+                    <Route exact path="/policy" component={Policy} />
 
-                  <Route render={() => <div>Not Found</div>} />
-                </Switch>
-              </CSSTransition>
-            </TransitionGroup>
-            <Footer />
-          </Content>
-        </Fill>
-      )}
-    />
+                    <Route render={() => <div>Not Found</div>} />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+              <Footer />
+            </Content>
+          </Fill>
+        )}
+      />
+    </ScrollToTopContainer>
   </Router>
 );
 
