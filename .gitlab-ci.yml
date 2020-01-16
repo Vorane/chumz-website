@@ -47,8 +47,8 @@ build-staging:
             docker push $image ;;
           esac
       done
-  only:
-    - deploy
+  # only:
+    # - deploy
   when: manual
   
 test_app:
@@ -58,7 +58,7 @@ test_app:
     - name: ${CI_REGISTRY_IMAGE}/chumz_website:${CI_COMMIT_SHA}
       alias: chumz
   script:
-    - curl --fail http://chumz/api
+    - curl --fail http://chumz
   when: manual
 
 deploy-staging:
@@ -79,8 +79,8 @@ deploy-staging:
     - docker-compose build
     - docker-compose up -d
     - docker-compose ps
-  only:
-    - deploy
+  # only:
+    # - deploy
   when: manual
   variables:
     DOCKER_HOST: $DOCKER_HOST_staging
