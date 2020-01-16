@@ -1,0 +1,24 @@
+version: '2.1'
+networks:
+  laradock_frontend:
+    external: true
+  backend:
+services:
+  chumz_website:
+    image: ${CI_REGISTRY_IMAGE-localhost:5000}/chumz_website:${IMAGE_TAG-v1}
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    expose:
+      - '80'
+    ports:
+      - '8000:80'
+    networks:
+      - laradock_frontend
+      - backend
+    labels:
+      - "traefik.enable=true"
+      - "traefik.frontend.rule=Host:moneto.co.ke"
+      - "traefik.port=80"
+      - "traefik.docker.network=laradock_frontend"
+    

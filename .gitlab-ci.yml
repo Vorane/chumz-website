@@ -1,0 +1,89 @@
+image: tiangolo/docker-with-compose
+
+variables:
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+before_script:
+  - env | grep DOCKER
+
+stages:
+  - test
+  - build
+  - deploy
+
+test:
+  stage: test
+  services:
+    - name: docker:dind
+      alias: docker
+  script:
+    - echo "Chumz"
+    - ls -al ./
+    - docker info
+
+build-staging:
+  stage: build
+  services:
+    - name: docker:dind
+      alias: docker
+  script:
+    - cp $DOT_ENV_staging .env
+    - ls -al ./
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker-compose config
+    - docker-compose pull || true
+    - docker-compose build
+    - |+
+      images=$(docker-compose config | grep 'image: ' | awk -F ':' '{ print $2 }')
+      for image in ${images}
+      do
+          case ${image} in 
+            registry* ) 
+            echo "Image Found"
+            echo ${image}
+            docker tag "${image}":"${IMAGE_TAG}" "${image}":latest
+            docker tag "${image}":"${IMAGE_TAG}" "${image}":"${CI_COMMIT_SHA}"
+            docker push $image ;;
+          esac
+      done
+  only:
+    - deploy
+  when: manual
+  
+test_app:
+  stage: test
+  image: curlimages/curl
+  services:
+    - name: ${CI_REGISTRY_IMAGE}/chumz_website:${CI_COMMIT_SHA}
+      alias: chumz
+  script:
+    - curl --fail http://chumz/api
+  when: manual
+
+deploy-staging:
+  stage: deploy
+  before_script:
+    - mkdir -p $DOCKER_CERT_PATH
+    - cp $DOCKER_CA  $DOCKER_CERT_PATH/ca.pem
+    - cp $DOCKER_CERT $DOCKER_CERT_PATH/cert.pem
+    - cp $DOCKER_CLIENT_KEY $DOCKER_CERT_PATH/key.pem
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker info
+  script:
+    - ls -al
+    - cp $DOT_ENV_staging .env
+    - ls -al
+    - env | grep DOCKER
+    - docker-compose pull || true
+    - docker-compose build
+    - docker-compose up -d
+    - docker-compose ps
+  only:
+    - deploy
+  when: manual
+  variables:
+    DOCKER_HOST: $DOCKER_HOST_staging
+    DOCKER_TLS_VERIFY: "1"
+    DOCKER_CERT_PATH: "/certs"
+    COMPOSE_INTERACTIVE_NO_CLI: "1"
