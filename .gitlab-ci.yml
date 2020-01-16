@@ -4,8 +4,8 @@ variables:
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
 
-before_script:
-  - env | grep DOCKER
+# before_script:
+  # - env | grep DOCKER
 
 stages:
   - test
@@ -58,7 +58,7 @@ test_app:
     - name: ${CI_REGISTRY_IMAGE}/chumz_website:${CI_COMMIT_SHA}
       alias: chumz
   script:
-    - curl --fail http://chumz
+    - curl -vvv --fail http://chumz
   when: manual
 
 deploy-staging:
