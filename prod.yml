@@ -11,8 +11,6 @@ services:
       dockerfile: nginx/Dockerfile
     expose:
       - '80'
-    ports:
-      - '8000:80'
     networks:
       - laradock_frontend
       - backend
