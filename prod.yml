@@ -16,7 +16,7 @@ services:
       - backend
     labels:
       - "traefik.enable=true"
-      - "traefik.frontend.rule=Host:moneto.co.ke"
+      - "traefik.frontend.rule=Host:chumz.moneto.co.ke"
       - "traefik.port=80"
       - "traefik.docker.network=laradock_frontend"
     
