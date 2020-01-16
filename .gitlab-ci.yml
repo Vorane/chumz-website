@@ -12,7 +12,7 @@ test:
   script:
     - echo "chumz_website"
     
-build-staging:
+build:
   stage: build
   services:
     - name: docker:dind
