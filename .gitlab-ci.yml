@@ -4,9 +4,6 @@ variables:
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
 
-before_script:
-  - env | grep DOCKER
-
 stages:
   - test
   - build
@@ -64,6 +61,7 @@ test_app:
 deploy-staging:
   stage: deploy
   before_script:
+    - env | grep DOCKER
     - mkdir -p $DOCKER_CERT_PATH
     - cp $DOCKER_CA  $DOCKER_CERT_PATH/ca.pem
     - cp $DOCKER_CERT $DOCKER_CERT_PATH/cert.pem
@@ -76,11 +74,9 @@ deploy-staging:
     - ls -al
     - env | grep DOCKER
     - docker-compose pull || true
-    - docker-compose build
+    # - docker-compose build
     - docker-compose up -d
     - docker-compose ps
-  # only:
-    # - deploy
   when: manual
   variables:
     DOCKER_HOST: $DOCKER_HOST_staging
