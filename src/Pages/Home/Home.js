@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import phonebanner from "../../assets/images/phonebanner.png"
 
 import googlePlayIcon from "../../assets/images/googleplay.png"
@@ -10,10 +11,12 @@ import leaderboardImage from "../../assets/images/showcase/leaderboard.png"
 import bannerBackground from "../../assets/images/banner-pattern.svg"
 import chumzLogo from "../../assets/images/chumzlogo.png"
 
-import accessibleIcon from "../../assets/icons/accessible.png"
-import adviceIcon from "../../assets/icons/advice.png"
-import consistentIcon from "../../assets/icons/consistent.png"
-import mobileIcon from "../../assets/icons/mobile.png"
+import awardIcon from "../../assets/icons/award.svg"
+import bellIcon from "../../assets/icons/bell.svg"
+import calendarIcon from "../../assets/icons/calendar.svg"
+import usersIcon from "../../assets/icons/users.svg"
+import crosshairIcon from "../../assets/icons/crosshair.svg"
+import barchartIcon from "../../assets/icons/barchart.svg"
 
 import anniversaryImage from "../../assets/images/categories/anniversary.png"
 import cookerImage from "../../assets/images/categories/cooker.png"
@@ -24,7 +27,7 @@ import gymImage from "../../assets/images/categories/gym.png"
 import healthcareImage from "../../assets/images/categories/healthcare.png"
 import speakersImage from "../../assets/images/categories/speakers.png"
 
-import styled from "styled-components"
+import FeatureItem from "./Components/FeatureItem"
 
 const HomeContainer = styled.section``
 const HeaderSection = styled.section``
@@ -301,6 +304,58 @@ const Section2 = () => {
 		</Wrapper>
 	)
 }
+const Section3 = () => {
+	const Item = ({ feature }) => {}
+
+	return (
+		<section>
+			<div className="container-fluid">
+				<div className="row">
+					{[
+						{
+							title: "Goals",
+							icon: crosshairIcon,
+							description:
+								"lorem ipsum dolor sit amet consectetur adipiscing elit.",
+						},
+						{
+							title: "Reminders",
+							icon: bellIcon,
+							description:
+								"lorem ipsum dolor sit amet consectetur adipiscing elit.",
+						},
+						{
+							title: "Reports",
+							icon: barchartIcon,
+							description:
+								"lorem ipsum dolor sit amet consectetur adipiscing elit.",
+						},
+						{
+							title: "Groups",
+							icon: usersIcon,
+							description:
+								"lorem ipsum dolor sit amet consectetur adipiscing elit.",
+						},
+						{
+							title: "Tracking",
+							icon: calendarIcon,
+							description:
+								"lorem ipsum dolor sit amet consectetur adipiscing elit.",
+						},
+						{
+							title: "Leaderboards",
+							icon: awardIcon,
+							description:
+								"lorem ipsum dolor sit amet consectetur adipiscing elit.",
+						},
+					].map((item, index) => (
+						<FeatureItem feature={item} />
+					))}
+				</div>
+			</div>
+		</section>
+	)
+}
 
 const Home = () => {
 	return (
@@ -308,6 +363,8 @@ const Home = () => {
 			<Banner />
 
 			<Section2 />
+
+			<Section3 />
 
 			<section class="fdb-block">
 				<div class="container-fluid">
