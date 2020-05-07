@@ -2,7 +2,7 @@ import React from "react"
 import phonebanner from "../../assets/images/phonebanner.png"
 
 import googlePlayIcon from "../../assets/images/googleplay.png"
-import freedomImage from "../../assets/images/freedom.png"
+import section2Image from "../../assets/images/secion2image.png"
 
 import trackingImage from "../../assets/images/showcase/tracking.png"
 import presetsImage from "../../assets/images/showcase/presets.png"
@@ -118,12 +118,12 @@ const Banner = ({}) => {
 			align-items: flex-start;
 			tex-align: left;
 		}
-		
+
 		@media (min-width: 992px) {
 			padding-top: 3rem;
 			padding-left: 3rem;
 		}
-		
+
 		@media (min-width: 1200px) {
 			padding-top: 4rem;
 			padding-left: 4rem;
@@ -210,40 +210,104 @@ const Banner = ({}) => {
 	)
 }
 
+const Section2 = () => {
+	const Wrapper = styled.section`
+		padding: 2rem;
+		@media (min-width: 576px) {
+		}
+
+		@media (min-width: 768px) {
+			padding: 2rem;
+		}
+
+		@media (min-width: 992px) {
+		}
+
+		@media (min-width: 1200px) {
+			padding: 9rem 5rem;
+		}
+
+		@media (min-width: 1824px) {
+		}
+	`
+	const Title = styled.h1`
+		color: #060039;
+		@media (min-width: 576px) {
+		}
+
+		@media (min-width: 768px) {
+		}
+
+		@media (min-width: 992px) {
+		}
+
+		@media (min-width: 1200px) {
+		}
+
+		@media (min-width: 1824px) {
+		}
+	`
+	const Description = styled.p`
+		@media (min-width: 576px) {
+		}
+
+		@media (min-width: 768px) {
+		}
+
+		@media (min-width: 992px) {
+		}
+
+		@media (min-width: 1200px) {
+		}
+
+		@media (min-width: 1824px) {
+		}
+	`
+	return (
+		<Wrapper className="">
+			<div className="container-fluid ">
+				<div className="row align-items-center text-center">
+					<div className="col-12 col-sm-5 d-block d-sm-none">
+						<img alt="image" className="img-fluid" src={section2Image} />
+					</div>
+
+					<div className="col-12 col-sm-7">
+						<Title>Saving made easy</Title>
+						<Description className="lead">
+							Achieve the goals, milestones you set out for yourself today.
+						</Description>
+						<Description className="lead">
+							It all starts by setting an easy goal. It’s time to achieve the
+							dream.
+						</Description>
+						<Description className="lead">
+							Chumz gives you nudges and reminders to help you stay on track
+						</Description>
+						<Description className="mt-4">
+							<a
+								href="https://play.google.com/store/app/details?id=com.chumz.app"
+								className="btn btn-secondary btn-large"
+							>
+								<h2>Start saving</h2>
+							</a>
+						</Description>
+					</div>
+
+					<div className="col-12 col-sm-5 d-none d-sm-block">
+						<img alt="image" className="img-fluid" src={section2Image} />
+					</div>
+				</div>
+			</div>
+		</Wrapper>
+	)
+}
+
 const Home = () => {
 	return (
 		<HomeContainer>
-
 			<Banner />
 
-			<section className="fdb-block">
-				<div className="container align-items-center justify-content-center d-flex">
-					<div className="row align-items-center text-left">
-						<div className="col-12 col-sm-5 ml-auto pt-5 pt-lg-0">
-							<h1>Freedom is priceless</h1>
-							<p className="lead">
-								Achieve the goals, milestones you set out for yourself today.
-							</p>
-							<p className="lead">
-								It all starts by setting an easy goal. It’s time to achieve the
-								dream.
-							</p>
-							<p className="mt-4">
-								<a
-									href="https://play.google.com/store/app/details?id=com.chumz.app"
-									className="btn btn-secondary btn-large"
-								>
-									<h2>Start saving</h2>
-								</a>
-							</p>
-						</div>
-
-						<div className="col-12 col-sm-7">
-							<img alt="image" className="img-fluid" src={freedomImage} />
-						</div>
-					</div>
-				</div>
-			</section>
+			<Section2 />
 
 			<section class="fdb-block">
 				<div class="container-fluid">
