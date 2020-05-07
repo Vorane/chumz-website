@@ -41,6 +41,23 @@ const FeatureIcon = styled.img`
 
 const Title = styled.h2`
 	color: ${(props) => (props.color ? props.color : "#fff")};
+	font-size: 1.5rem ;
+	@media (min-width: 576px) {
+	}
+
+	@media (min-width: 768px) {
+		font-size: 2rem;
+	}
+
+	@media (min-width: 992px) {
+	}
+
+	@media (min-width: 1200px) {
+		font-size: 3rem;
+	}
+
+	@media (min-width: 1824px) {
+	}
 `
 const Description = styled.p`
 	color: ${(props) => (props.color ? props.color : "#fff")};
@@ -73,10 +90,10 @@ export default class index extends Component {
 		let { feature } = this.props
 		return (
 			<FeatureItem
-				className="col-6 col-sm-4"
+				className="col-6 col-sm-4 container"
 				onMouseLeave={this.unHover}
 				onMouseEnter={this.hover}
-				color={this.state.hovered ? "#060039" : "#fff"}
+				color={this.state.hovered ? "#060039" : "#f5f5f5"}
 			>
 				<FeatureIcon
 					alt="image"
