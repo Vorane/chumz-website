@@ -9,7 +9,10 @@ import trackingImage from "../../assets/images/showcase/tracking.png"
 import presetsImage from "../../assets/images/showcase/presets.png"
 import leaderboardImage from "../../assets/images/showcase/leaderboard.png"
 import bannerBackground from "../../assets/images/banner-pattern.svg"
-import chumzLogo from "../../assets/images/chumzlogo.png"
+import chamaImage from "../../assets/images/chama.png"
+import groupChatImage from "../../assets/images/chama/groupchat.png"
+import transactionHistoryImage from "../../assets/images/chama/transactionhistory.png"
+import authorizationImage from "../../assets/images/chama/authorization.png"
 
 import awardIcon from "../../assets/icons/award.svg"
 import bellIcon from "../../assets/icons/bell.svg"
@@ -357,6 +360,141 @@ const Section3 = () => {
 	)
 }
 
+const ChamaSection = () => {
+	const Title = styled.h1`
+		text-align: center;
+		@media (min-width: 576px) {
+		}
+
+		@media (min-width: 768px) {
+		}
+
+		@media (min-width: 992px) {
+		}
+
+		@media (min-width: 1200px) {
+		}
+
+		@media (min-width: 1824px) {
+		}
+	`
+
+	const OptionContainer = styled.div`
+		padding: 2rem 0rem;
+		@media (min-width: 576px) {
+		}
+		
+		@media (min-width: 768px) {
+			padding: 4rem 0rem;
+		}
+		
+		@media (min-width: 992px) {
+		}
+		
+		@media (min-width: 1200px) {
+			padding: 6rem 0rem;
+		}
+
+		@media (min-width: 1824px) {
+		}
+	`
+
+	const ChamaCardContainer = styled.div`
+		padding: 2rem;
+	`
+	const ChamaCard = styled.div`
+		background-color: ${(props) => props.color};
+		border-radius: 1rem;
+	`
+
+	const ChamaTitleContainer = styled.div`
+		padding: 1rem 0rem;
+	`
+	const ChamaTitle = styled.h5`
+		font-size: 2rem;
+		color: ${(props) => props.color};
+		font-family: Cera-Bold;
+		@media (min-width: 576px) {
+		}
+
+		@media (min-width: 768px) {
+			font-size: 2rem;
+		}
+
+		@media (min-width: 992px) {
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 2rem;
+		}
+
+		@media (min-width: 1824px) {
+		}
+	`
+
+	const ChamaImageContainer = styled.div`
+		padding: 0rem 1rem;
+	`
+	const ChamaImage = styled.img`
+		height: 300px;
+	`
+
+	const ChamaFeaturesSection = styled.div``
+	return (
+		<section className="fdb-block">
+			<div className="container-fluid">
+				<div>
+					<Title>Your chama just found a new home</Title>
+					<h3>
+						Join forces with friends, family, colleagures to save for a common
+						goal
+					</h3>
+				</div>
+				<img className="img-fluid" src={chamaImage} />
+			</div>
+			<OptionContainer>
+				<div className="container-fluid">
+					<div className="row">
+						<ChamaCardContainer className="col-12 col-sm-4">
+							<ChamaCard color={"#B3E5FC"}>
+								<ChamaTitleContainer>
+									<ChamaTitle color={"#03A9F4"}> Group chat</ChamaTitle>
+								</ChamaTitleContainer>
+								<ChamaImageContainer>
+									<ChamaImage className="img-fluid" src={groupChatImage} />
+								</ChamaImageContainer>
+							</ChamaCard>
+						</ChamaCardContainer>
+						<ChamaCardContainer className="col-12 col-sm-4">
+							<ChamaCard color={"#FFE0B2"}>
+								<ChamaTitleContainer>
+									<ChamaTitle color={"#FF9800"}>Withdrawal approval</ChamaTitle>
+								</ChamaTitleContainer>
+								<ChamaImageContainer>
+									<ChamaImage className="img-fluid" src={authorizationImage} />
+								</ChamaImageContainer>
+							</ChamaCard>
+						</ChamaCardContainer>
+						<ChamaCardContainer className="col-12 col-sm-4">
+							<ChamaCard color={"#B2DFDB"}>
+								<ChamaTitleContainer>
+									<ChamaTitle color={"#009688"}>Transaction history</ChamaTitle>
+								</ChamaTitleContainer>
+								<ChamaImageContainer>
+									<ChamaImage
+										className="img-fluid"
+										src={transactionHistoryImage}
+									/>
+								</ChamaImageContainer>
+							</ChamaCard>
+						</ChamaCardContainer>
+					</div>
+				</div>
+			</OptionContainer>
+		</section>
+	)
+}
+
 const Home = () => {
 	return (
 		<HomeContainer>
@@ -365,6 +503,8 @@ const Home = () => {
 			<Section2 />
 
 			<Section3 />
+
+			<ChamaSection />
 
 			<section class="fdb-block">
 				<div class="container-fluid">
