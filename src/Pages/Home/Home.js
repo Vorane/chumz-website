@@ -13,6 +13,7 @@ import chamaImage from "../../assets/images/chama.png"
 import groupChatImage from "../../assets/images/chama/groupchat.png"
 import transactionHistoryImage from "../../assets/images/chama/transactionhistory.png"
 import authorizationImage from "../../assets/images/chama/authorization.png"
+import competitionImage from "../../assets/images/competition.png"
 
 import awardIcon from "../../assets/icons/award.svg"
 import bellIcon from "../../assets/icons/bell.svg"
@@ -383,14 +384,14 @@ const ChamaSection = () => {
 		padding: 2rem 0rem;
 		@media (min-width: 576px) {
 		}
-		
+
 		@media (min-width: 768px) {
 			padding: 4rem 0rem;
 		}
-		
+
 		@media (min-width: 992px) {
 		}
-		
+
 		@media (min-width: 1200px) {
 			padding: 6rem 0rem;
 		}
@@ -494,6 +495,99 @@ const ChamaSection = () => {
 		</section>
 	)
 }
+const CategoriesSection = () => {
+	const Title = styled.h1`
+		text-align: center;
+		@media (min-width: 576px) {
+		}
+
+		@media (min-width: 768px) {
+		}
+
+		@media (min-width: 992px) {
+		}
+
+		@media (min-width: 1200px) {
+		}
+
+		@media (min-width: 1824px) {
+		}
+	`
+
+	return (
+		<section className="fdb-block">
+			<div className="container-fluid">
+				<div>
+					<Title>Your chama just found a new home</Title>
+					<h3>
+						Join forces with friends, family, colleagures to save for a common
+						goal
+					</h3>
+				</div>
+				<img className="img-fluid" src={chamaImage} />
+			</div>
+		</section>
+	)
+}
+const CompetitionSection = () => {
+	const TitleContainer = styled.div`
+		padding: 0rem 3rem;
+	`
+	const Title = styled.h1`
+		text-align: center;
+		@media (min-width: 576px) {
+		}
+
+		@media (min-width: 768px) {
+			text-align: right;
+		}
+
+		@media (min-width: 992px) {
+		}
+
+		@media (min-width: 1200px) {
+		}
+
+		@media (min-width: 1824px) {
+		}
+	`
+
+	const Description = styled.h3`
+		text-align: center;
+		@media (min-width: 576px) {
+		}
+
+		@media (min-width: 768px) {
+			text-align: right;
+		}
+
+		@media (min-width: 992px) {
+		}
+
+		@media (min-width: 1200px) {
+		}
+
+		@media (min-width: 1824px) {
+		}
+	`
+
+	const CompetitionImage = styled.img``
+
+	return (
+		<section className="fdb-block">
+			<div className="container-fluid">
+				<TitleContainer>
+					<Title>Test your grit in our savings learderboard</Title>
+					<Description>
+						Fancy yourself competitive? Compete with other players and stand to
+						win prizes
+					</Description>
+				</TitleContainer>
+				<CompetitionImage className="img-fluid" src={competitionImage} />
+			</div>
+		</section>
+	)
+}
 
 const Home = () => {
 	return (
@@ -505,6 +599,8 @@ const Home = () => {
 			<Section3 />
 
 			<ChamaSection />
+
+			<CompetitionSection />
 
 			<section class="fdb-block">
 				<div class="container-fluid">
@@ -581,77 +677,6 @@ const Home = () => {
 							<h3>
 								<strong>Adventure</strong>
 							</h3>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="fdb-block">
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-12 text-left">
-							<h1>Showcase</h1>
-
-							<p className="lead">
-								With mobile phone on the raise a majority of people in the
-								emerging markets unbanked Chumz is building an easier way of the
-								unbanked to get the ability to save their funds.
-							</p>
-							<p className="lead">
-								Chumz enables anyone to create a goal and save as little as Kes
-								5 to their savings account.
-							</p>
-							<p className="lead">
-								The service guides the user on how to make more savings through
-								research based behavioural psychology mechanism and through a
-								user friendly navigation experience
-							</p>
-						</div>
-					</div>
-
-					<div class="row text-left mt-5">
-						<div class="col-12 col-sm-6 col-md-3 col-lg-3  mr-md-auto ml-md-0 pt-5 pt-md-0">
-							<img alt="image" class="img-fluid rounded" src={trackingImage} />
-							<h3>
-								<strong>Tracking</strong>
-							</h3>
-							<p>
-								View the progress of your goal on a regular basis. Should you
-								miss a target, there are provisions to get you back on track
-							</p>
-						</div>
-
-						<div class="col-12 col-sm-6 col-md-3 col-lg-3  pt-5 pt-md-0">
-							<img alt="image" class="img-fluid rounded" src={presetsImage} />
-							<h3>
-								<strong>Curated Goals</strong>
-							</h3>
-							<p>
-								Not sure what to save for? Access the list of curated goals from
-								the chumz team to quickly get you started.
-							</p>
-						</div>
-
-						<div class="col-12 col-sm-6 col-md-3 col-lg-3  ml-md-auto mr-md-0 pt-5 pt-md-0">
-							<img
-								alt="image"
-								class="img-fluid rounded"
-								src={leaderboardImage}
-							/>
-							<h3>
-								<strong>Competition</strong>
-							</h3>
-							<p>Compete with other users to gain an edge and stand to win.</p>
-						</div>
-						<div class="col-12 col-sm-6 col-md-3 col-lg-3  mr-md-auto ml-md-0">
-							<img alt="image" class="img-fluid rounded" src={trackingImage} />
-							<h3>
-								<strong>Tracking</strong>
-							</h3>
-							<p>
-								View the progress of your goal on a regular basis. Should you
-								miss a target, there are provisions to get you back on track
-							</p>
 						</div>
 					</div>
 				</div>
