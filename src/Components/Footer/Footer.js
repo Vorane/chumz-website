@@ -1,5 +1,5 @@
 import React from "react";
-import pigIcon from "../../assets/images/pigicon.png";
+import pigIcon from "../../assets/images/pigicon.svg";
 
 import styled from "styled-components";
 import { Link } from "react-router-dom";

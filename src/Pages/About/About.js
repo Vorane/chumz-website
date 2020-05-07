@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import pigIcon from "../../assets/images/pigicon.png";
+import pigIcon from "../../assets/images/pigicon.svg";
 import evans from "../../assets/images/people/evans.jpg";
 import samuel from "../../assets/images/people/samuel.jpg";
 import njogu from "../../assets/images/people/njogu.png";
