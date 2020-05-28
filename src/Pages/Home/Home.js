@@ -26,48 +26,19 @@ import usersIcon from "../../assets/icons/users.svg"
 import crosshairIcon from "../../assets/icons/crosshair.svg"
 import barchartIcon from "../../assets/icons/barchart.svg"
 
-import anniversaryImage from "../../assets/images/categories/anniversary.png"
-import cookerImage from "../../assets/images/categories/cooker.png"
-import graduationImage from "../../assets/images/categories/graduation.png"
-import rainydayImage from "../../assets/images/categories/rainyday.png"
-import tripImage from "../../assets/images/categories/trip.png"
-import gymImage from "../../assets/images/categories/gym.png"
-import healthcareImage from "../../assets/images/categories/healthcare.png"
-import speakersImage from "../../assets/images/categories/speakers.png"
+import businessImage from "../../assets/images/categories/business.jpg"
+import emergencyImage from "../../assets/images/categories/emergency.jpg"
+import graduationImage from "../../assets/images/categories/graduation.jpg"
+import headphonesImage from "../../assets/images/categories/headphones.jpg"
+import landImage from "../../assets/images/categories/land.jpg"
+import otherImage from "../../assets/images/categories/other.jpg"
+import rentImage from "../../assets/images/categories/rent.jpg"
+import sneakersImage from "../../assets/images/categories/sneakers.jpg"
+import calendarImage from "../../assets/images/categories/calendar.jpg"
 
 import FeatureItem from "./Components/FeatureItem"
 
 const HomeContainer = styled.section``
-const HeaderSection = styled.section``
-const BannerSection = styled.section`
-	background-image: url(${bannerBackground});
-	background-size: cover;
-	background-position-x: left;
-	color: #121212;
-`
-
-const ChumzName = styled.h1`
-	color: #3d3d3d;
-	font-weight: 900;
-`
-const ValueProposition = styled.h1`
-	font-size: 4em;
-	font-weight: 900;
-	color: #cc3300;
-`
-
-const FeaturesSection = styled.section`
-	background-color: transparent;
-`
-
-const FeaturesHeaderText = styled.h1`
-	padding-top: 10px;
-	padding-bottom: 20px;
-`
-
-const FeatureDescription = styled.p`
-	color: #3d3d3d;
-`
 
 const CTAContainer = styled.div`
 	padding: 50px 20px;
@@ -313,8 +284,6 @@ const Section2 = () => {
 	)
 }
 const Section3 = () => {
-	const Item = ({ feature }) => {}
-
 	return (
 		<section>
 			<div className="container-fluid">
@@ -324,37 +293,37 @@ const Section3 = () => {
 							title: "Goals",
 							icon: crosshairIcon,
 							description:
-								"lorem ipsum dolor sit amet consectetur adipiscing elit.",
+								"Create, track and achieve your savings goals. You can create a goal to save for anything you wish to save for.",
 						},
 						{
 							title: "Reminders",
 							icon: bellIcon,
 							description:
-								"lorem ipsum dolor sit amet consectetur adipiscing elit.",
+								"Never lose track of your savings. Get notifications reminding you to save either daily, weekly, monthly. The choice is yours.",
 						},
 						{
 							title: "Reports",
 							icon: barchartIcon,
 							description:
-								"lorem ipsum dolor sit amet consectetur adipiscing elit.",
+								"See your saving performance over time. Get detailed well designed reports along with suggestions for improvements.",
 						},
 						{
 							title: "Groups",
 							icon: usersIcon,
 							description:
-								"lorem ipsum dolor sit amet consectetur adipiscing elit.",
+								"Create saving groups and save together together with you family, friends and colleagues. Save for any goal you wish for.",
 						},
 						{
 							title: "Tracking",
 							icon: calendarIcon,
 							description:
-								"lorem ipsum dolor sit amet consectetur adipiscing elit.",
+								"Set amounts you wish to save and how you wish to be saving. The app will help you track your goals on an easy to use interface.",
 						},
 						{
 							title: "Leaderboards",
 							icon: awardIcon,
 							description:
-								"lorem ipsum dolor sit amet consectetur adipiscing elit.",
+								"See how you compare with the rest of the Chumz community interms of the goals achieved and how much you save",
 						},
 					].map((item, index) => (
 						<FeatureItem feature={item} />
@@ -616,13 +585,29 @@ const SavingCategoriesSection = () => {
 	`
 
 	const CategoryImageContainer = styled.div`
-		padding: 0px;
+		@media (min-width: 576px) {
+		}
+
+		@media (min-width: 768px) {
+			text-align: right;
+			padding: 0px;
+		}
+
+		@media (min-width: 992px) {
+		}
+
+		@media (min-width: 1200px) {
+		}
+
+		@media (min-width: 1824px) {
+		}
 	`
 	const CategoryDescriptionContainer = styled.div`
-		padding: 1rem 1rem;
+		padding: 1rem 2rem;
 	`
 	const CategoryImage = styled.img`
-		height: 100%;
+		width: 100%;
+		height: 200px;
 	`
 	const CategoryTitle = styled.h2`
 		text-align: left;
@@ -634,6 +619,13 @@ const SavingCategoriesSection = () => {
 	const CategoryValue = styled.p`
 		text-align: left;
 		margin: 0;
+	`
+	const CategoryTitleContainer = styled.div`
+		min-height: 100px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
 	`
 	return (
 		<section class="fdb-block">
@@ -647,29 +639,89 @@ const SavingCategoriesSection = () => {
 
 				<div className="container-fluid">
 					<div className="row">
-						{[1, 11, 1, 1, 1, 1, 1, 1, 1].map((item, indes) => (
-							<div className="col-12 col-sm-6 col-md-4">
-								<CategoryCard className="contianer-fluid">
-									<div className="row">
-										<CategoryImageContainer className="col-5">
-											<CategoryImage
-												src={graduationImage}
-												className="img img-fluid"
-											/>
-										</CategoryImageContainer>
-										<CategoryDescriptionContainer className="col-7">
-											<CategoryTitle>Education</CategoryTitle>
-											<CategoryField>
-												<CategoryValue>9999 participants</CategoryValue>
-											</CategoryField>
-											<CategoryField>
-												<CategoryValue>999 successfull saves</CategoryValue>
-											</CategoryField>
-										</CategoryDescriptionContainer>
-									</div>
-								</CategoryCard>
-							</div>
-						))}
+						{[
+							{
+								goals: 25,
+								amount: 11400,
+								name: "Tech Accessories",
+								image: headphonesImage,
+							},
+							{
+								goals: 14,
+								amount: 2926,
+								name: "52 Week Challenge",
+								image: calendarImage,
+							},
+							{
+								goals: 9,
+								amount: 11900,
+								name: "Emergency",
+								image: emergencyImage,
+							},
+							{
+								goals: 11,
+								amount: 10370,
+								name: "Land",
+								image: landImage,
+							},
+							{
+								goals: 8,
+								amount: 4450,
+								name: "Sports Shoes",
+								image: sneakersImage,
+							},
+							{
+								goals: 11,
+								amount: 2028,
+								name: "Rent",
+								image: rentImage,
+							},
+							{
+								goals: 22,
+								amount: 9600,
+								name: "Education",
+								image: graduationImage,
+							},
+
+							{
+								goals: 4,
+								amount: 14048,
+								name: "Business",
+								image: businessImage,
+							},
+							{
+								goals: 37,
+								amount: 73254,
+								name: "General",
+								image: otherImage,
+							},
+						]
+							.sort((a, b) => b.amount - a.amount)
+							.map((item, index) => (
+								<div className="col-12 col-sm-12 col-md-6 col-lg-4" key={index}>
+									<CategoryCard className="contianer-fluid">
+										<div className="row">
+											<CategoryImageContainer className="col-12 col-sm-4 col-md-5 container">
+												<CategoryImage
+													src={item.image}
+													className="img img-fluid"
+												/>
+											</CategoryImageContainer>
+											<CategoryDescriptionContainer className="col-12 col-sm-8 col-md-7">
+												<CategoryTitleContainer>
+													<CategoryTitle>{item.name}</CategoryTitle>
+												</CategoryTitleContainer>
+												<CategoryField>
+													<CategoryValue>{item.goals} goals</CategoryValue>
+												</CategoryField>
+												<CategoryField>
+													<CategoryValue>KES {item.amount} saved</CategoryValue>
+												</CategoryField>
+											</CategoryDescriptionContainer>
+										</div>
+									</CategoryCard>
+								</div>
+							))}
 					</div>
 				</div>
 			</div>

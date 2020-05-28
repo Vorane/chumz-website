@@ -90,7 +90,7 @@ export default class index extends Component {
 		let { feature } = this.props
 		return (
 			<FeatureItem
-				className="col-6 col-sm-4 container"
+				className="col-12 col-sm-4 container"
 				onMouseLeave={this.unHover}
 				onMouseEnter={this.hover}
 				color={this.state.hovered ? "#060039" : "#f5f5f5"}
