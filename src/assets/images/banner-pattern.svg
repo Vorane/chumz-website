@@ -1,6 +1,6 @@
 <svg width="1768" height="791" viewBox="0 0 1768 791" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1768" height="791" rx="56" fill="#060039"/>
 <g clip-path="url(#clip0)">
-<rect width="1378.68" height="719.843" transform="matrix(-0.529919 -0.848048 -0.848048 0.529919 340.466 678)" fill="white"/>
 <rect width="1600" height="1200" transform="matrix(-0.529919 -0.848048 -0.848048 0.529919 340.466 678)" fill="#060039"/>
 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="-1526" y="-679" width="1867" height="1993">
 <rect width="1600" height="1200" transform="matrix(-0.529919 -0.848048 -0.848048 0.529919 340.466 678)" fill="#060039"/>
@@ -18,7 +18,6 @@
 </g>
 </g>
 <g clip-path="url(#clip1)">
-<rect width="1378.68" height="719.843" transform="matrix(-0.48481 -0.87462 -0.87462 0.48481 2579.93 713)" fill="white"/>
 <rect width="1600" height="1200" transform="matrix(-0.48481 -0.87462 -0.87462 0.48481 2579.93 713)" fill="#060039"/>
 <mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="754" y="-687" width="1826" height="1982">
 <rect width="1600" height="1200" transform="matrix(-0.48481 -0.87462 -0.87462 0.48481 2579.93 713)" fill="#060039"/>

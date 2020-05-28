@@ -5,15 +5,19 @@ import phonebanner from "../../assets/images/phonebanner.png"
 import googlePlayIcon from "../../assets/images/googleplay.png"
 import section2Image from "../../assets/images/secion2image.png"
 
-import trackingImage from "../../assets/images/showcase/tracking.png"
-import presetsImage from "../../assets/images/showcase/presets.png"
-import leaderboardImage from "../../assets/images/showcase/leaderboard.png"
+// import trackingImage from "../../assets/images/showcase/tracking.png"
+// import presetsImage from "../../assets/images/showcase/presets.png"
+// import leaderboardImage from "../../assets/images/showcase/leaderboard.png"
 import bannerBackground from "../../assets/images/banner-pattern.svg"
 import chamaImage from "../../assets/images/chama.png"
 import groupChatImage from "../../assets/images/chama/groupchat.png"
 import transactionHistoryImage from "../../assets/images/chama/transactionhistory.png"
 import authorizationImage from "../../assets/images/chama/authorization.png"
 import competitionImage from "../../assets/images/competition.png"
+
+import testimonialImage1 from "../../assets/images/testimonials/testimonial-1.png"
+import testimonialImage2 from "../../assets/images/testimonials/testimonial-2.png"
+import testimonialImage3 from "../../assets/images/testimonials/testimonial-3.png"
 
 import awardIcon from "../../assets/icons/award.svg"
 import bellIcon from "../../assets/icons/bell.svg"
@@ -401,15 +405,21 @@ const ChamaSection = () => {
 	`
 
 	const ChamaCardContainer = styled.div`
-		padding: 2rem;
+		padding: 1rem;
 	`
 	const ChamaCard = styled.div`
 		background-color: ${(props) => props.color};
 		border-radius: 1rem;
+		height: 100%;
 	`
 
 	const ChamaTitleContainer = styled.div`
 		padding: 1rem 0rem;
+		min-height: 100px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	`
 	const ChamaTitle = styled.h5`
 		font-size: 2rem;
@@ -438,6 +448,22 @@ const ChamaSection = () => {
 	`
 	const ChamaImage = styled.img`
 		height: 300px;
+		@media (min-width: 576px) {
+		}
+
+		@media (min-width: 768px) {
+			height: 200px;
+		}
+
+		@media (min-width: 992px) {
+			height: 300px;
+		}
+
+		@media (min-width: 1200px) {
+		}
+
+		@media (min-width: 1824px) {
+		}
 	`
 
 	const ChamaFeaturesSection = styled.div``
@@ -445,16 +471,23 @@ const ChamaSection = () => {
 		<section className="fdb-block">
 			<div className="container-fluid">
 				<div>
-					<Title>Your chama just found a new home</Title>
+					<Title>Forget Whatsapp groups</Title>
+					<Title> save on chumz </Title>
 					<h3>
-						Join forces with friends, family, colleagures to save for a common
-						goal
+						Join forces with friends, family, chama, colleagures to save for a
+						common goal
 					</h3>
+					<a
+						href="https://play.google.com/store/app/details?id=com.chumz.app"
+						className="btn btn-secondary btn-large"
+					>
+						<h2>learn more</h2>
+					</a>
 				</div>
 				<img className="img-fluid" src={chamaImage} />
 			</div>
 			<OptionContainer>
-				<div className="container-fluid">
+				<div className="container">
 					<div className="row">
 						<ChamaCardContainer className="col-12 col-sm-4">
 							<ChamaCard color={"#B3E5FC"}>
@@ -495,40 +528,7 @@ const ChamaSection = () => {
 		</section>
 	)
 }
-const CategoriesSection = () => {
-	const Title = styled.h1`
-		text-align: center;
-		@media (min-width: 576px) {
-		}
 
-		@media (min-width: 768px) {
-		}
-
-		@media (min-width: 992px) {
-		}
-
-		@media (min-width: 1200px) {
-		}
-
-		@media (min-width: 1824px) {
-		}
-	`
-
-	return (
-		<section className="fdb-block">
-			<div className="container-fluid">
-				<div>
-					<Title>Your chama just found a new home</Title>
-					<h3>
-						Join forces with friends, family, colleagures to save for a common
-						goal
-					</h3>
-				</div>
-				<img className="img-fluid" src={chamaImage} />
-			</div>
-		</section>
-	)
-}
 const CompetitionSection = () => {
 	const TitleContainer = styled.div`
 		padding: 0rem 3rem;
@@ -589,6 +589,172 @@ const CompetitionSection = () => {
 	)
 }
 
+const SavingCategoriesSection = () => {
+	const Description = styled.h3`
+		text-align: center;
+		@media (min-width: 576px) {
+		}
+
+		@media (min-width: 768px) {
+			text-align: right;
+		}
+
+		@media (min-width: 992px) {
+		}
+
+		@media (min-width: 1200px) {
+		}
+
+		@media (min-width: 1824px) {
+		}
+	`
+	const CategoryCard = styled.div`
+		margin-top: 1rem;
+
+		border-radius: 0.28571429rem;
+		box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+	`
+
+	const CategoryImageContainer = styled.div`
+		padding: 0px;
+	`
+	const CategoryDescriptionContainer = styled.div`
+		padding: 1rem 1rem;
+	`
+	const CategoryImage = styled.img`
+		height: 100%;
+	`
+	const CategoryTitle = styled.h2`
+		text-align: left;
+		margin: 0;
+	`
+	const CategoryField = styled.div`
+		text-align: left;
+	`
+	const CategoryValue = styled.p`
+		text-align: left;
+		margin: 0;
+	`
+	return (
+		<section class="fdb-block">
+			<div class="container-fluid">
+				<div class="row text-center">
+					<div class="col-12">
+						<h1>Curated saving plans</h1>
+						<p class="lead" />
+					</div>
+				</div>
+
+				<div className="container-fluid">
+					<div className="row">
+						{[1, 11, 1, 1, 1, 1, 1, 1, 1].map((item, indes) => (
+							<div className="col-12 col-sm-6 col-md-4">
+								<CategoryCard className="contianer-fluid">
+									<div className="row">
+										<CategoryImageContainer className="col-5">
+											<CategoryImage
+												src={graduationImage}
+												className="img img-fluid"
+											/>
+										</CategoryImageContainer>
+										<CategoryDescriptionContainer className="col-7">
+											<CategoryTitle>Education</CategoryTitle>
+											<CategoryField>
+												<CategoryValue>9999 participants</CategoryValue>
+											</CategoryField>
+											<CategoryField>
+												<CategoryValue>999 successfull saves</CategoryValue>
+											</CategoryField>
+										</CategoryDescriptionContainer>
+									</div>
+								</CategoryCard>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+	)
+}
+
+const TestimonialSection = ({ testimonials }) => {
+	const Description = styled.h3`
+		text-align: center;
+		@media (min-width: 576px) {
+		}
+
+		@media (min-width: 768px) {
+			text-align: right;
+		}
+
+		@media (min-width: 992px) {
+		}
+
+		@media (min-width: 1200px) {
+		}
+
+		@media (min-width: 1824px) {
+		}
+	`
+	const QuoteImageContainer = styled.div`
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+	`
+
+	const QuoteImage = styled.img``
+
+	const TestimonialCard = styled.div`
+		margin-top: 1rem;
+		background-color: #009d86;
+		padding: 1rem;
+		margin-top: 1rem;
+		height: 100%;
+	`
+	const TestimonialTitle = styled.h2`
+		text-align: left;
+		margin: 0;
+		color: #fff;
+		font-family: Cera-Bold;
+	`
+	const TestimonialQuote = styled.h4`
+		color: #fff;
+		text-align: left;
+		margin: 0;
+		font-weight: bold;
+	`
+	return (
+		<section class="fdb-block">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-12">
+						<h1>Testimonial</h1>
+						<p class="lead">Don't just take our work for it.</p>
+					</div>
+				</div>
+
+				<div className="container">
+					<div className="row">
+						{testimonials.map((item, indes) => (
+							<div className="col-12 col-sm-6 col-md-4">
+								<TestimonialCard>
+									<QuoteImageContainer>
+										<QuoteImage src={item.image} className="img img-fluid" />
+									</QuoteImageContainer>
+									<div>
+										<TestimonialTitle>{item.name}</TestimonialTitle>
+										<TestimonialQuote>{item.comment}</TestimonialQuote>
+									</div>
+								</TestimonialCard>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+	)
+}
+
 const Home = () => {
 	return (
 		<HomeContainer>
@@ -602,86 +768,30 @@ const Home = () => {
 
 			<CompetitionSection />
 
-			<section class="fdb-block">
-				<div class="container-fluid">
-					<div class="row text-center">
-						<div class="col-12">
-							<h1>There is a saving plan for everyone</h1>
-							<p class="lead" />
-						</div>
-					</div>
+			<SavingCategoriesSection />
 
-					<div class="row text-left justify-content-center mt-5">
-						<div class="col-6 col-sm-3 pt-5 pt-sm-0">
-							<img
-								alt="image"
-								class="img-fluid rounded"
-								src={anniversaryImage}
-							/>
-							<h3>
-								<strong>Loved ones</strong>
-							</h3>
-						</div>
-						<div class="col-6 col-sm-3 pt-5 pt-sm-0">
-							<img
-								alt="image"
-								class="img-fluid rounded"
-								src={graduationImage}
-							/>
-							<h3>
-								<strong>Education</strong>
-							</h3>
-						</div>
-
-						<div class="col-6 col-sm-3 pt-5 pt-sm-0">
-							<img alt="image" class="img-fluid rounded" src={cookerImage} />
-							<h3>
-								<strong>Home appliances</strong>
-							</h3>
-						</div>
-
-						<div class="col-6 col-sm-3 pt-5 pt-sm-0">
-							<img alt="image" class="img-fluid rounded" src={rainydayImage} />
-							<h3>
-								<strong>unexpected events</strong>
-							</h3>
-						</div>
-					</div>
-					<div class="row text-left justify-content-center mt-5">
-						<div class="col-6 col-sm-3 pt-5 pt-sm-0">
-							<img alt="image" class="img-fluid rounded" src={gymImage} />
-							<h3>
-								<strong>Self Improvement</strong>
-							</h3>
-						</div>
-						<div class="col-6 col-sm-3 pt-5 pt-sm-0">
-							<img
-								alt="image"
-								class="img-fluid rounded"
-								src={healthcareImage}
-							/>
-							<h3>
-								<strong>Wellness</strong>
-							</h3>
-						</div>
-
-						<div class="col-6 col-sm-3 pt-5 pt-sm-0">
-							<img alt="image" class="img-fluid rounded" src={speakersImage} />
-							<h3>
-								<strong>Entertainment</strong>
-							</h3>
-						</div>
-
-						<div class="col-6 col-sm-3 pt-5 pt-sm-0">
-							<img alt="image" class="img-fluid rounded" src={tripImage} />
-							<h3>
-								<strong>Adventure</strong>
-							</h3>
-						</div>
-					</div>
-				</div>
-			</section>
-
+			<TestimonialSection
+				testimonials={[
+					{
+						image: testimonialImage1,
+						name: "Jack kinga",
+						comment:
+							"Chumz has help me think different about saving due to ease of use",
+					},
+					{
+						image: testimonialImage2,
+						name: "Kelvin Kamau",
+						comment:
+							"Chumz has enabled me get to several of my  financial goals",
+					},
+					{
+						image: testimonialImage3,
+						name: "Emily wakarima",
+						comment:
+							"The app is great! I'm now able to save for different events in my personal life, and also with my girlfriends, right from my phone!!!",
+					},
+				]}
+			/>
 			<section className="fdb-block">
 				<CTAContainer className="container">
 					<div className="row justify-content-center align-items-center">
@@ -690,7 +800,7 @@ const Home = () => {
 						</div>
 						<div className="col-xs-6 col-sm-4">
 							<p>
-								Start saving today and be on trackto your dream of financial
+								Start saving today and be on track to your dream of financial
 								freedom
 							</p>
 						</div>
