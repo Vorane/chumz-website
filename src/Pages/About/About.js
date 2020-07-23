@@ -8,6 +8,8 @@ import njogu from "../../assets/images/people/njogu.png";
 import padu from "../../assets/images/people/padu.jpg";
 import tim from "../../assets/images/people/tim.png";
 import albert from "../../assets/images/people/albert.jpg";
+import vincent from "../../assets/images/people/vincent.png";
+import timothy from "../../assets/images/people/timothy.png";
 
 const TeamMemberCard = styled.div`
   padding-top: 40px;
@@ -27,7 +29,7 @@ const About = () => {
       school: "University of Nairobi",
       passion:
         "Holding idealism over financial security by founding startups that will see Africa out of poverty.",
-      image: samuel
+      image: samuel,
     },
     {
       name: "Njogu Kinyanjui",
@@ -36,7 +38,7 @@ const About = () => {
       school: "University of Nairobi",
       passion:
         "Designs that seek to solve problems and make this world a better place",
-      image: njogu
+      image: njogu,
     },
     {
       name: "Titus Marenye",
@@ -44,7 +46,7 @@ const About = () => {
       background: "Bachelor of Actuarial science",
       school: "University of Nairobi",
       passion: "Generating value for others through sound investment decision",
-      image: tim
+      image: tim,
     },
     {
       name: "Samuel Njoki",
@@ -53,7 +55,7 @@ const About = () => {
       school: "Moi University",
       passion:
         "Technology that solves actual pain points that’s easy to use through utilization of behavioural psychology approaches",
-      image: padu
+      image: padu,
     },
     {
       name: "Albert Kipkoskei",
@@ -62,16 +64,33 @@ const About = () => {
       school: "Moi University",
       passion:
         "Solving specific end-user problems and developing solutions that align towards  users' experience",
-      image: albert
+      image: albert,
     },
     {
       name: "Evans Munene",
       role: "Software Engineer",
       background: "Bsc. Computer Science",
-      school: "Univeirity of Nairobi",
+      school: "University of Nairobi",
       passion: "Building elegant software solutions for real world needs",
-      image: evans
-    }
+      image: evans,
+    },
+    {
+      name: "Timothy Guoko",
+      role: "Strategy",
+      background: "B.Comm, CPA(K)",
+      school: "University of Nairobi",
+      passion: "Bringing creative ideas and projects to life",
+      image: timothy,
+    },
+    {
+      name: "Vincent M Muriithi",
+      role: "Partnership Acquisition",
+      background: "Bsc. Business Studies",
+      school: "Kenyatta University",
+      passion:
+        "Bridging ideas and opportunities through strategic partnerships",
+      image: vincent,
+    },
   ];
   return (
     <div>
@@ -80,7 +99,6 @@ const About = () => {
           <div className="row text-left justify-content-left">
             <div className="col-8">
               <h1>Our Amazing Team</h1>
-              
             </div>
           </div>
 
