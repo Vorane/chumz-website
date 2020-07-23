@@ -1,54 +1,54 @@
-import React from "react"
-import styled from "styled-components"
-import phonebanner from "../../assets/images/phonebanner.png"
+import React from "react";
+import styled from "styled-components";
+import phonebanner from "../../assets/images/phonebanner.png";
 
-import googlePlayIcon from "../../assets/images/googleplay.png"
-import section2Image from "../../assets/images/secion2image.png"
+import googlePlayIcon from "../../assets/images/googleplay.png";
+import section2Image from "../../assets/images/secion2image.png";
 
 // import trackingImage from "../../assets/images/showcase/tracking.png"
 // import presetsImage from "../../assets/images/showcase/presets.png"
 // import leaderboardImage from "../../assets/images/showcase/leaderboard.png"
-import bannerBackground from "../../assets/images/banner-pattern.svg"
-import chamaImage from "../../assets/images/chama.png"
-import groupChatImage from "../../assets/images/chama/groupchat.png"
-import transactionHistoryImage from "../../assets/images/chama/transactionhistory.png"
-import authorizationImage from "../../assets/images/chama/authorization.png"
-import competitionImage from "../../assets/images/competition.png"
+import bannerBackground from "../../assets/images/banner-pattern.svg";
+import chamaImage from "../../assets/images/chama.png";
+import groupChatImage from "../../assets/images/chama/groupchat.png";
+import transactionHistoryImage from "../../assets/images/chama/transactionhistory.png";
+import authorizationImage from "../../assets/images/chama/authorization.png";
+import competitionImage from "../../assets/images/competition.png";
 
-import testimonialImage1 from "../../assets/images/testimonials/testimonial-1.png"
-import testimonialImage2 from "../../assets/images/testimonials/testimonial-2.png"
-import testimonialImage3 from "../../assets/images/testimonials/testimonial-3.png"
+import testimonialImage1 from "../../assets/images/testimonials/testimonial-1.png";
+import testimonialImage2 from "../../assets/images/testimonials/testimonial-2.png";
+import testimonialImage3 from "../../assets/images/testimonials/testimonial-3.png";
 
-import awardIcon from "../../assets/icons/award.svg"
-import bellIcon from "../../assets/icons/bell.svg"
-import calendarIcon from "../../assets/icons/calendar.svg"
-import usersIcon from "../../assets/icons/users.svg"
-import crosshairIcon from "../../assets/icons/crosshair.svg"
-import barchartIcon from "../../assets/icons/barchart.svg"
+import awardIcon from "../../assets/icons/award.svg";
+import bellIcon from "../../assets/icons/bell.svg";
+import calendarIcon from "../../assets/icons/calendar.svg";
+import usersIcon from "../../assets/icons/users.svg";
+import crosshairIcon from "../../assets/icons/crosshair.svg";
+import barchartIcon from "../../assets/icons/barchart.svg";
 
-import businessImage from "../../assets/images/categories/business.jpg"
-import emergencyImage from "../../assets/images/categories/emergency.jpg"
-import graduationImage from "../../assets/images/categories/graduation.jpg"
-import headphonesImage from "../../assets/images/categories/headphones.jpg"
-import landImage from "../../assets/images/categories/land.jpg"
-import otherImage from "../../assets/images/categories/other.jpg"
-import rentImage from "../../assets/images/categories/rent.jpg"
-import sneakersImage from "../../assets/images/categories/sneakers.jpg"
-import calendarImage from "../../assets/images/categories/calendar.jpg"
+import businessImage from "../../assets/images/categories/business.jpg";
+import emergencyImage from "../../assets/images/categories/emergency.jpg";
+import graduationImage from "../../assets/images/categories/graduation.jpg";
+import headphonesImage from "../../assets/images/categories/headphones.jpg";
+import landImage from "../../assets/images/categories/land.jpg";
+import otherImage from "../../assets/images/categories/other.jpg";
+import rentImage from "../../assets/images/categories/rent.jpg";
+import sneakersImage from "../../assets/images/categories/sneakers.jpg";
+import calendarImage from "../../assets/images/categories/calendar.jpg";
 
-import FeatureItem from "./Components/FeatureItem"
+import FeatureItem from "./Components/FeatureItem";
 
-const HomeContainer = styled.section``
+const HomeContainer = styled.section``;
 
 const CTAContainer = styled.div`
-	padding: 50px 20px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-	background-color: #000033;
-	color: white;
-`
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000033;
+  color: white;
+`;
 
 const Banner = ({}) => {
 	const Wrapper = styled.section`
