@@ -115,7 +115,7 @@ const Policy = () => {
               in security occur.
             </p>
 
-            <h1>Notification in the event of breach</h1>
+            <h2>Notification in the event of breach</h2>
             <p>
               It would be very unlikely, but if a breach in the security of
               Personal Data were to occur, we will notify you if you are
@@ -127,7 +127,7 @@ const Policy = () => {
               overall.
             </p>
 
-            <h1>Contacting Chumz about privacy questions or concerns</h1>
+            <h2>Contacting Chumz about privacy questions or concerns</h2>
             <p>
               If you have any questions about this Privacy Policy or the use of
               your Personal Data, please contact us by sending an email to the
@@ -140,14 +140,14 @@ const Policy = () => {
               order to send you a reply.
             </p>
 
-            <h1>Privacy Policy changes</h1>
+            <h2>Privacy Policy changes</h2>
             <p>
               Chumz may change this Privacy Policy at any time by posting the
               revised policy on its app and website. Any changes will become
               effective immediately upon being posted unless stated otherwise.
             </p>
 
-            <h1>Cookies</h1>
+            <h2>Cookies</h2>
             <p>
               We may use cookies to, amongst other things, gather and retain
               information about a Subscriber’s use of the Service to enable them

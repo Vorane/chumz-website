@@ -28,11 +28,11 @@ const Footer = () => {
 
           <div class="col-12 col-lg-4 text-lg-right mt-4 mt-lg-0">
             <ul class="nav justify-content-lg-end justify-content-center">
-              <NavLink to="/contact" replace className="nav-item">
-                <a className="nav-link">Contact</a>
+              <NavLink to="/faqs" replace className="nav-item">
+                <a className="nav-link">FAQs</a>
               </NavLink>
 
-              <NavLink to="/contact" replace className="nav-item">
+              <NavLink to="/about" replace className="nav-item">
                 <a className="nav-link">About</a>
               </NavLink>
 

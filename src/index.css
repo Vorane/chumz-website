@@ -6,11 +6,12 @@ body {
 h1 {
 	font-family: Cera-Bold;
 	font-size: 2.25rem;
+	line-height: 1;
 }
 
 @media (min-width: 576px) {
 	h1 {
-		font-size: 5rem;	
+		font-size: 4rem;	
 	}
 }
 
@@ -22,7 +23,7 @@ h1 {
 
 @media (min-width: 1200px) {
 	h1 {
-		font-size: 6.25rem;
+		font-size: 5rem;
 	}
 }
 

@@ -170,7 +170,7 @@ const Banner = ({}) => {
 								<Title>CHUMZ</Title>
 								<Description>Building a saving culture.</Description>
 								<a
-									href="https://play.google.com/store/app/details?id=com.chumz.app"
+									href="https://play.google.com/store/apps/details?id=com.chumz.app"
 									className=""
 								>
 									<img alt="image" height="50" src={googlePlayIcon} />
@@ -267,7 +267,7 @@ const Section2 = () => {
 						</Description>
 						<Description className="mt-4">
 							<a
-								href="https://play.google.com/store/app/details?id=com.chumz.app"
+								href="https://play.google.com/store/apps/details?id=com.chumz.app"
 								className="btn btn-secondary btn-large"
 							>
 								<h2>Start saving</h2>
@@ -320,10 +320,10 @@ const Section3 = () => {
 								"Set amounts you wish to save and how you wish to be saving. The app will help you track your goals on an easy to use interface.",
 						},
 						{
-							title: "Leaderboards",
+							title: "Leader boards",
 							icon: awardIcon,
 							description:
-								"See how you compare with the rest of the Chumz community interms of the goals achieved and how much you save",
+								"See how you compare with the rest of the Chumz community in terms of the goals achieved and how much you save",
 						},
 					].map((item, index) => (
 						<FeatureItem feature={item} />
@@ -443,11 +443,11 @@ const ChamaSection = () => {
 					<Title>Forget Whatsapp groups</Title>
 					<Title> save on chumz </Title>
 					<h3>
-						Join forces with friends, family, chama, colleagures to save for a
+						Join forces with friends, family, chama, colleagues to save for a
 						common goal
 					</h3>
 					<a
-						href="https://play.google.com/store/app/details?id=com.chumz.app"
+						href="https://play.google.com/store/apps/details?id=com.chumz.app"
 						className="btn btn-secondary btn-large"
 					>
 						<h2>learn more</h2>
@@ -546,7 +546,7 @@ const CompetitionSection = () => {
 		<section className="fdb-block">
 			<div className="container-fluid">
 				<TitleContainer>
-					<Title>Test your grit in our savings learderboard</Title>
+					<Title>Test your grit in our savings learder board</Title>
 					<Description>
 						Fancy yourself competitive? Compete with other players and stand to
 						win prizes
@@ -699,7 +699,7 @@ const SavingCategoriesSection = () => {
 							.sort((a, b) => b.amount - a.amount)
 							.map((item, index) => (
 								<div className="col-12 col-sm-12 col-md-6 col-lg-4" key={index}>
-									<CategoryCard className="contianer-fluid">
+									<CategoryCard className="container-fluid">
 										<div className="row">
 											<CategoryImageContainer className="col-12 col-sm-4 col-md-5 container">
 												<CategoryImage
@@ -787,7 +787,7 @@ const TestimonialSection = ({ testimonials }) => {
 
 				<div className="container">
 					<div className="row">
-						{testimonials.map((item, indes) => (
+						{testimonials.map((item, index) => (
 							<div className="col-12 col-sm-6 col-md-4">
 								<TestimonialCard>
 									<QuoteImageContainer>
@@ -806,6 +806,7 @@ const TestimonialSection = ({ testimonials }) => {
 		</section>
 	)
 }
+
 
 const Home = () => {
 	return (
@@ -859,7 +860,7 @@ const Home = () => {
 						<div className="col-xs-12 col-sm-4">
 							<p className="mt-4">
 								<a
-									href="https://play.google.com/store/app/details?id=com.chumz.app"
+									href="https://play.google.com/store/apps/details?id=com.chumz.app"
 									className="btn btn-secondary btn-large"
 								>
 									<h2>Start saving</h2>
