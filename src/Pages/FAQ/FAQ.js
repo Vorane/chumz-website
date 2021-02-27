@@ -206,9 +206,6 @@ const faqs = [
   },
 ];
 
-const FAQSection = styled.div`
-  padding: 40px 0px;
-`;
 const FAQField = styled.div`
   padding: 10px 0px;
 `;
@@ -242,5 +239,3 @@ export default function componentName() {
     </div>
   );
 }
-
-

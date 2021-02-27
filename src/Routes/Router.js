@@ -4,7 +4,6 @@ import {
   HashRouter as Router,
   Switch,
   Route,
-  Link,
   Redirect,
   withRouter,
 } from "react-router-dom";
@@ -15,6 +14,7 @@ import "./Router.css";
 import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
 import Policy from "../Pages/Policy/Policy";
+import TOS from "../Pages/TOS/TOS";
 import Header from "../Components/Header/Header";
 import FAQ from "../Pages/FAQ/FAQ";
 import Footer from "../Components/Footer/Footer";
@@ -90,6 +90,8 @@ const PageRouter = () => (
                     <Route exact path="/contact" component={Home} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/policy" component={Policy} />
+                    <Route exact path="/tos" component={TOS} />
+                    <Route exact path="/terms" component={TOS} />
                     <Route exact path="/faqs" component={FAQ} />
 
                     <Route render={() => <div>Not Found</div>} />

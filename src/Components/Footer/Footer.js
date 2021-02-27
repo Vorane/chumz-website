@@ -22,7 +22,7 @@ const Footer = () => {
 
           <div class="col-12 col-lg-4 mt-4 mt-lg-0">
             <NavLink to="/home" replace>
-              <img alt="image" src={pigIcon} height="40" />
+              <img alt="piggy" src={pigIcon} height="40" />
             </NavLink>
           </div>
 

@@ -173,7 +173,7 @@ const Banner = ({}) => {
 									href="https://play.google.com/store/apps/details?id=com.chumz.app"
 									className=""
 								>
-									<img alt="image" height="50" src={googlePlayIcon} />
+									<img alt="play store" height="50" src={googlePlayIcon} />
 								</a>
 							</CTA>
 						</div>
@@ -250,7 +250,7 @@ const Section2 = () => {
 			<div className="container-fluid ">
 				<div className="row align-items-center text-center">
 					<div className="col-12 col-sm-5 d-block d-sm-none">
-						<img alt="image" className="img-fluid" src={section2Image} />
+						<img alt="saving made easy" className="img-fluid" src={section2Image} />
 					</div>
 
 					<div className="col-12 col-sm-7">
@@ -276,7 +276,7 @@ const Section2 = () => {
 					</div>
 
 					<div className="col-12 col-sm-5 d-none d-sm-block">
-						<img alt="image" className="img-fluid" src={section2Image} />
+						<img alt="features" className="img-fluid" src={section2Image} />
 					</div>
 				</div>
 			</div>
@@ -435,7 +435,6 @@ const ChamaSection = () => {
 		}
 	`
 
-	const ChamaFeaturesSection = styled.div``
 	return (
 		<section className="fdb-block">
 			<div className="container-fluid">
@@ -453,7 +452,7 @@ const ChamaSection = () => {
 						<h2>learn more</h2>
 					</a>
 				</div>
-				<img className="img-fluid" src={chamaImage} />
+				<img alt="saving groups" className="img-fluid" src={chamaImage} />
 			</div>
 			<OptionContainer>
 				<div className="container">
@@ -546,7 +545,7 @@ const CompetitionSection = () => {
 		<section className="fdb-block">
 			<div className="container-fluid">
 				<TitleContainer>
-					<Title>Test your grit in our savings learder board</Title>
+					<Title>Test your grit in our savings leader board</Title>
 					<Description>
 						Fancy yourself competitive? Compete with other players and stand to
 						win prizes
@@ -559,24 +558,7 @@ const CompetitionSection = () => {
 }
 
 const SavingCategoriesSection = () => {
-	const Description = styled.h3`
-		text-align: center;
-		@media (min-width: 576px) {
-		}
-
-		@media (min-width: 768px) {
-			text-align: right;
-		}
-
-		@media (min-width: 992px) {
-		}
-
-		@media (min-width: 1200px) {
-		}
-
-		@media (min-width: 1824px) {
-		}
-	`
+	
 	const CategoryCard = styled.div`
 		margin-top: 1rem;
 
@@ -730,24 +712,6 @@ const SavingCategoriesSection = () => {
 }
 
 const TestimonialSection = ({ testimonials }) => {
-	const Description = styled.h3`
-		text-align: center;
-		@media (min-width: 576px) {
-		}
-
-		@media (min-width: 768px) {
-			text-align: right;
-		}
-
-		@media (min-width: 992px) {
-		}
-
-		@media (min-width: 1200px) {
-		}
-
-		@media (min-width: 1824px) {
-		}
-	`
 	const QuoteImageContainer = styled.div`
 		display: flex;
 		flex-direction: row;
