@@ -4,7 +4,6 @@ import {
   HashRouter as Router,
   Switch,
   Route,
-  Link,
   Redirect,
   withRouter,
 } from "react-router-dom";
