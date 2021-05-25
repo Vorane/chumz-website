@@ -50,7 +50,7 @@ const CTAContainer = styled.div`
   color: white;
 `;
 
-const Banner = ({}) => {
+const Banner = ({ }) => {
 	const Wrapper = styled.section`
 		padding: 1rem;
 		@media (min-width: 576px) {
@@ -252,18 +252,16 @@ const Section2 = () => {
 					<div className="col-12 col-sm-5 d-block d-sm-none">
 						<img alt="saving made easy" className="img-fluid" src={section2Image} />
 					</div>
-
 					<div className="col-12 col-sm-7">
 						<Title>Saving made easy</Title>
 						<Description className="lead">
-							Achieve the goals, milestones you set out for yourself today.
+							Achieve your savings goals today!
 						</Description>
 						<Description className="lead">
-							It all starts by setting an easy goal. It’s time to achieve the
-							dream.
+							stay on track by sending your reminders.
 						</Description>
 						<Description className="lead">
-							Chumz gives you nudges and reminders to help you stay on track
+							Set your goals and Chumz will help you
 						</Description>
 						<Description className="mt-4">
 							<a
@@ -293,13 +291,13 @@ const Section3 = () => {
 							title: "Goals",
 							icon: crosshairIcon,
 							description:
-								"Create, track and achieve your savings goals. You can create a goal to save for anything you wish to save for.",
+								"Create, track and achieve all your savings goals.",
 						},
 						{
 							title: "Reminders",
 							icon: bellIcon,
 							description:
-								"Never lose track of your savings. Get notifications reminding you to save either daily, weekly, monthly. The choice is yours.",
+								"Don't lose track of your savings. Choose to get reminders daily, weekly or monthly.u",
 						},
 						{
 							title: "Reports",
@@ -311,13 +309,13 @@ const Section3 = () => {
 							title: "Groups",
 							icon: usersIcon,
 							description:
-								"Create saving groups and save together together with you family, friends and colleagues. Save for any goal you wish for.",
+								"Create savings groups and save with your family, friends and colleagues",
 						},
 						{
 							title: "Tracking",
 							icon: calendarIcon,
 							description:
-								"Set amounts you wish to save and how you wish to be saving. The app will help you track your goals on an easy to use interface.",
+								"Set goal targets and savings plans. Chumz will help you track your goals on an easy to use interface.",
 						},
 						{
 							title: "Leader boards",
@@ -558,7 +556,7 @@ const CompetitionSection = () => {
 }
 
 const SavingCategoriesSection = () => {
-	
+
 	const CategoryCard = styled.div`
 		margin-top: 1rem;
 
@@ -745,7 +743,7 @@ const TestimonialSection = ({ testimonials }) => {
 				<div class="row text-center">
 					<div class="col-12">
 						<h1>Testimonial</h1>
-						<p class="lead">Don't just take our work for it.</p>
+						<p class="lead">Don't just take our word for it</p>
 					</div>
 				</div>
 
@@ -793,7 +791,7 @@ const Home = () => {
 						image: testimonialImage1,
 						name: "Jack kinga",
 						comment:
-							"Chumz has help me think different about saving due to ease of use",
+							"Chumz has helped me think differently about saving due to ease of use",
 					},
 					{
 						image: testimonialImage2,
@@ -803,7 +801,7 @@ const Home = () => {
 					},
 					{
 						image: testimonialImage3,
-						name: "Emily wakarima",
+						name: "Emily Wakarima",
 						comment:
 							"The app is great! I'm now able to save for different events in my personal life, and also with my girlfriends, right from my phone!!!",
 					},
