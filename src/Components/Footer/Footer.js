@@ -93,7 +93,7 @@ const Footer = () => (
               <NavLink to="/faqs" replace className="nav-item">
                 <a className="nav-link" >FAQ</a>
               </NavLink>
-              <a className="nav-link" >Support</a>
+
             </nav>
           </div>
 
