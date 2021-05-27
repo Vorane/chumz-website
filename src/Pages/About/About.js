@@ -9,14 +9,19 @@ import tim from "../../assets/images/people/tim.png";
 import albert from "../../assets/images/people/albert.jpg";
 import vincent from "../../assets/images/people/vincent.png";
 import timothy from "../../assets/images/people/timothy.png";
+import antonio from "../../assets/images/people/antonio.jpg";
 
 const TeamMemberCard = styled.div`
   padding-top: 40px;
+  
 `;
 
 const PeopleImage = styled.img`
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
+
+  height: 150px;
+  width: 150px;
 `;
 
 const About = () => {
@@ -90,6 +95,15 @@ const About = () => {
         "Bridging ideas and opportunities through strategic partnerships",
       image: vincent,
     },
+    {
+      name: "Antonio Maina",
+      role: "Software Engineer",
+      background: "BSc. Computer Science (Jomo Kenyatta University of Agriculture and Technology)",
+      school: "Jomo Kenyatta University Of Science And Technology",
+      passion:
+        " Building user-centric products for the common human being",
+      image: antonio,
+    },
   ];
   return (
     <div>
@@ -105,17 +119,18 @@ const About = () => {
 
           <div className="row justify-content-left text-left">
             {team.map((member, index) => (
-              <TeamMemberCard className="col-sm-6" key={index}>
+              <TeamMemberCard className="col-sm-6 col-md-4" key={index}>
                 <div className="row align-items-top">
-                  <div className="col-4">
+                  <div className="col-12">
                     <PeopleImage
                       alt="image"
                       className="img-fluid rounded-circle"
+                      height="40"
                       src={member.image}
                     />
                   </div>
 
-                  <div className="col-8">
+                  <div className="col-12">
                     <h3>
                       <strong>{member.name}</strong>
                     </h3>

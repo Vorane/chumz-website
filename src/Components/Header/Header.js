@@ -103,14 +103,15 @@ class Header extends Component {
 										About
 									</a>
 								</NavLink>
-								<NavLink to="/contact" replace className="nav-item nav-link">
+								{/* <NavLink to="/contact" replace className="nav-item nav-link">
 									<a className="nav-link" onClick={this._onToggleNav}>
 										Contact
 									</a>
-								</NavLink>
+								</NavLink> */}
 								<NavButton>
 									<a
 										href="https://play.google.com/store/app/details?id=com.chumz.app"
+										href="https://play.google.com/store/apps/details?id=com.chumz.app"
 										className="btn btn-secondary btn-large"
 										target="blank"
 									>
