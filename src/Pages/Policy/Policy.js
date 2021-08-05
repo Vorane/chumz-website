@@ -11,7 +11,7 @@ const Policy = () => {
 			<div className='container'>
 				<div className='row text-left justify-content-left'>
 					<section className='fdb-block'>
-						<h1 id='untitled'>Policy</h1>						
+						<h1 id='untitled'>Policy</h1>
 						<p>
 							This Privacy Policy explains how Chumz uses your
 							Personal Data collected or processed from you in
@@ -50,7 +50,9 @@ const Policy = () => {
 							you invite friends and family to join your financial
 							groups within the app. By clicking invite a member
 							in the app a link is sent to the person to join your
-							group.
+							group. Contacts are stored on the phone cache.
+							Contact information is not uploaded to remote
+							storage.
 						</p>
 						<p>
 							<BoldText>Messages:</BoldText> To enable Chumz guide
