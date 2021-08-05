@@ -1,16 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const BoldText = styled.strong`
+	color: #3d3d3d;
+`
+
 const Policy = () => {
 	return (
 		<div>
 			<div className='container'>
 				<div className='row text-left justify-content-left'>
 					<section className='fdb-block'>
-						<h1 id='untitled'>Untitled</h1>
-						<h2 id='-privacy-policy-'>
-							<strong>Privacy Policy</strong>
-						</h2>
+						<h1 id='untitled'>Policy</h1>						
 						<p>
 							This Privacy Policy explains how Chumz uses your
 							Personal Data collected or processed from you in
@@ -45,17 +46,17 @@ const Policy = () => {
 							<strong>How we use your Personal Data</strong>
 						</h2>
 						<p>
-							<strong>Contacts information:</strong> to enable you
-							invite friends and family to join your financial
+							<BoldText>Contacts information:</BoldText> to enable
+							you invite friends and family to join your financial
 							groups within the app. By clicking invite a member
 							in the app a link is sent to the person to join your
 							group.
 						</p>
 						<p>
-							<strong>Messages:</strong> To enable Chumz guide and
-							advise you on how to save based on your mobile money
-							financial transactions. This option can be switched
-							on and off in the app
+							<BoldText>Messages:</BoldText> To enable Chumz guide
+							and advise you on how to save based on your mobile
+							money financial transactions. This option can be
+							switched on and off in the app
 						</p>
 						<p>
 							Chumz uses Personal Data to communicate with you and
