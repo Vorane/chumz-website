@@ -11,7 +11,7 @@ const Policy = () => {
 			<div className='container'>
 				<div className='row text-left justify-content-left'>
 					<section className='fdb-block'>
-						<h1 id='untitled'>Policy</h1>
+						<h1 id='untitled'>Privacy Policy</h1>
 						<p>
 							This Privacy Policy explains how Chumz uses your
 							Personal Data collected or processed from you in
