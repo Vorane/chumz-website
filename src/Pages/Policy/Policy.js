@@ -46,13 +46,16 @@ const Policy = () => {
 							<strong>How we use your Personal Data</strong>
 						</h2>
 						<p>
-							<BoldText>Contacts information:</BoldText> to enable
-							you invite friends and family to join your financial
-							groups within the app. By clicking invite a member
-							in the app a link is sent to the person to join your
-							group. Contacts are stored on the phone cache.
-							Contact information is not uploaded to remote
-							storage.
+							<BoldText>Contact list information:</BoldText> We
+							request permission to access your contact list
+							information to enable you invite friends and family
+							to join your financial investment groups from the
+							app to your phone-book contact list. By clicking
+							invite a member from the app a link is sent to the
+							person to join your group via the the contact list
+							permission you have authorized. You can opt-in or
+							opt-out of the contact list information access
+							feature.
 						</p>
 						<p>
 							<BoldText>Messages:</BoldText> To enable Chumz guide
