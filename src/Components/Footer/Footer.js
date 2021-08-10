@@ -84,7 +84,7 @@ const Footer = () => (
           <div className="col-12 col-sm-6 col-md-4 col-lg-3 mt-5 mt-sm-0 text-sm-left">
             <h3><strong>Legal</strong></h3>
             <nav className="nav flex-column">
-              <NavLink to="/policy" replace className="nav-item">
+              <NavLink to="/privacy-policy" replace className="nav-item">
                 <a className="nav-link active" >Privacy Policy</a>
               </NavLink>
               <NavLink to="/terms" replace className="nav-item">

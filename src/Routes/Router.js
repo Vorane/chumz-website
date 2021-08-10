@@ -89,7 +89,7 @@ const PageRouter = () => (
                     <Route exact path="/home" component={Home} />
                     <Route exact path="/contact" component={Home} />
                     <Route exact path="/about" component={About} />
-                    <Route exact path="/policy" component={Policy} />
+                    <Route exact path="/privacy-policy" component={Policy} />
                     <Route exact path="/tos" component={TOS} />
                     <Route exact path="/terms" component={TOS} />
                     <Route exact path="/faqs" component={FAQ} />

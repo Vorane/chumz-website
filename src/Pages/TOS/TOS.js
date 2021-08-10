@@ -44,7 +44,7 @@ const Policy = () => {
               <li>Your personal information will be treated and processed securely and strictly in accordance with applicable laws and regulations.</li>
               <li>We will not treat customer information as confidential where it is already public knowledge or where it becomes public knowledge through no fault of our own.</li>
               <li>We may disclose customer information if we are required to do so by law, by court order, by any statutory, legal or regulatory requirement, by the police or any other competent authorities in connection with the prevention or detection of crime or to help combat fraud, money laundering and terrorism financing. We may also report suspicious activity to appropriate competent law enforcement or government authorities.</li>
-              <li>For more details and information regarding the confidentiality, privacy and security please refer to our Privacy Policy that can be found at <a href="https://chumz.io/#/policy">https://chumz.io/#/policy.</a></li>
+              <li>For more details and information regarding the confidentiality, privacy and security please refer to our Privacy Policy that can be found at <a href="https://chumz.io/#/privacy-policy">https://chumz.io/#/privacy-policy.</a></li>
             </ol>
             <h2 id="eligibility-and-your-access-rights">Eligibility and your access rights</h2>
             <ol>
