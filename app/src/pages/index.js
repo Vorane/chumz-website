@@ -35,7 +35,7 @@ import otherImage from '../images/categories/other.jpg'
 import rentImage from '../images/categories/rent.jpg'
 import sneakersImage from '../images/categories/sneakers.jpg'
 import calendarImage from '../images/categories/calendar.jpg'
-import Layout from '../components/layout/layout'
+import Layout from '../components/Layout/layout'
 
 import FeatureItem from '../components/FeatureItem'
 

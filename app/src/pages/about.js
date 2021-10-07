@@ -10,7 +10,7 @@ import albert from '../images/people/albert.jpg'
 import vincent from '../images/people/vincent.png'
 import timothy from '../images/people/timothy.png'
 import antonio from '../images/people/antonio.jpg'
-import Layout from '../components/layout/layout'
+import Layout from '../components/Layout/layout'
 
 const TeamMemberCard = styled.div`
 	padding-top: 40px;
