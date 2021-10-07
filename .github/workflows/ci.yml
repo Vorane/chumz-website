@@ -32,7 +32,7 @@ jobs:
           command_timeout: 200m
           envs: BRANCH,DO_AUTH_TOKEN,TRAEFIK_DOMAIN,BAUTH_USER,BAUTH_PASS,ACME_EMAIL,TRAEFIK_PILOT_TOKEN
           script: |
-            cd api
+            cd app
             git config user.email "dev@vorane.com"
             git config user.name "Vorane Studios"
             git checkout $BRANCH            
