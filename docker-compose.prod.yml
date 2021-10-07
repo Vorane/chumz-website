@@ -25,8 +25,8 @@ services:
             - '--log.level=DEBUG'
             - '--certificatesresolvers.basic.acme.email=${ACME_EMAIL}'
             - '--certificatesresolvers.basic.acme.storage=le/acme.json'
-            - "--certificatesresolvers.basic.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory"
-            # - '--certificatesresolvers.basic.acme.caServer=https://acme-v02.api.letsencrypt.org/directory'
+            # - "--certificatesresolvers.basic.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory"
+            - '--certificatesresolvers.basic.acme.caServer=https://acme-v02.api.letsencrypt.org/directory'
             - '--certificatesresolvers.basic.acme.dnschallenge.provider=digitalocean'
         ports:
             - target: 80
