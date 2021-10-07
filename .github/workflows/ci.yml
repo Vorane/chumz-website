@@ -1,4 +1,4 @@
-name: Deploy to test server
+name: Deploy to prod server
 on:
   # Trigger the workflow on push or pull request,
   # but only for the master branch
