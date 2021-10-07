@@ -1,0 +1,45 @@
+version: "3"
+services:
+
+  traefik:
+        image: 'traefik:v2.0.0-rc3'
+        container_name: chumz-traefik
+        command:
+            #- "--log.level=DEBUG"
+            - '--api.insecure=true'
+            - '--providers.docker=true'
+            - '--providers.docker.exposedbydefault=false'
+            - '--entrypoints.web.address=:80'
+        ports:
+            - '80:80'
+            - '8080:8080'
+        volumes:
+            - '/var/run/docker.sock:/var/run/docker.sock:ro'
+        labels:
+            - 'traefik.enable=true'
+            - 'traefik.http.routers.traefik.rule=Host(`dash.localhost`)'
+            - 'traefik.http.routers.traefik.entrypoints=web'
+            - 'traefik.http.services.traefik.loadbalancer.server.port=8080'
+
+  whoami:
+      image: 'containous/whoami'
+      container_name: 'chumz-whoami'
+      labels:
+          - 'traefik.enable=true'
+          - 'traefik.http.routers.whoami.rule=Host(`whoami.localhost`)'
+          - 'traefik.http.routers.whoami.entrypoints=web'
+  
+  app:
+    container_name: 'chumz-app'
+    build:
+      context: ./app
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./app/src:/app/src # Links the source files to the running container
+    ports:
+      - "8000:8000"
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.api.rule=Host(`app.localhost`)'
+      - 'traefik.http.routers.api.entrypoints=web'
+      - 'traefik.http.services.api.loadbalancer.server.port=8000'
