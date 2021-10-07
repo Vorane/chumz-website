@@ -1,0 +1,103 @@
+version: '3.7'
+
+services:
+    # Reverse proxy
+    traefik:
+        container_name: truwater-traefik
+        image: 'traefik:latest'
+        environment:
+            - DO_AUTH_TOKEN
+            - TRAEFIK_DOMAIN
+            - BAUTH_PASS
+            - BAUTH_USER
+            - ACME_EMAIL
+            - TRAEFIK_PILOT_TOKEN
+        command:
+            - '--providers.docker=true'
+            - '--providers.docker.exposedbydefault=false'
+            - '--entrypoints.web.address=:80'
+            - '--entrypoints.websecure.address=:443'
+            - '--pilot.token=${TRAEFIK_PILOT_TOKEN}'
+            - '--api.dashboard=true'
+            - '--api.insecure=true'
+            - '--providers.docker=true'
+            - '--providers.docker.endpoint=unix:///var/run/docker.sock'
+            - '--log.level=DEBUG'
+            - '--certificatesresolvers.basic.acme.email=${ACME_EMAIL}'
+            - '--certificatesresolvers.basic.acme.storage=le/acme.json'
+            - "--certificatesresolvers.basic.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory"
+            # - '--certificatesresolvers.basic.acme.caServer=https://acme-v02.api.letsencrypt.org/directory'
+            - '--certificatesresolvers.basic.acme.dnschallenge.provider=digitalocean'
+        ports:
+            - target: 80
+              published: 80
+              mode: host
+            - target: 443
+              published: 443
+              mode: host
+        volumes:
+            - 'acme_data:/le'
+            - '/var/run/docker.sock:/var/run/docker.sock:ro'
+        networks:
+            - traefik-net
+            - default
+        labels:
+            - 'traefik.enable=true'
+            - 'traefik.http.routers.traefik.rule=Host(`dash.${TRAEFIK_DOMAIN}`)'
+            - 'traefik.http.routers.traefik.service=api@internal'
+            - 'traefik.http.routers.traefik.tls.certresolver=basic'
+            - 'traefik.http.routers.traefik.tls.domains[0].main=${TRAEFIK_DOMAIN}'
+            - 'traefik.http.routers.traefik.tls.domains[0].sans=*.${TRAEFIK_DOMAIN}'
+            - 'traefik.http.routers.traefik.entrypoints=websecure'
+            # Global redirect to https
+            - 'traefik.http.routers.http-catchall.rule=hostregexp(`{host:.+}`)'
+            - 'traefik.http.routers.http-catchall.entrypoints=web'
+            - 'traefik.http.routers.http-catchall.middlewares=redirect-to-https'
+            # HTTPs redirect middleware
+            - 'traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https'
+
+            - 'traefik.http.routers.traefik.middlewares=authtraefik'
+            - 'traefik.http.services.traefik.loadbalancer.server.port=8080'
+            - 'traefik.http.routers.traefik.priority=3'
+            - 'traefik.http.middlewares.authtraefik.basicauth.users=${BAUTH_USER}:${BAUTH_PASS}'
+
+    # IP addentifier
+    whoami:
+        image: containous/whoami
+        labels:
+            - 'traefik.enable=true'
+            # - "traefik.http.routers.whoami.middlewares=user-auth@file"
+            - 'traefik.http.routers.whoami.rule=Host(`whoami.${TRAEFIK_DOMAIN}`)'
+            - 'traefik.http.routers.whoami.tls=true'
+        networks:
+            - traefik-net
+
+    # Cors
+    cors:
+        image: redocly/cors-anywhere
+        labels:
+            - 'traefik.enable=true'
+            - 'traefik.http.routers.cors.rule=Host(`cors.${TRAEFIK_DOMAIN}`)'
+            - 'traefik.http.routers.cors.tls=true'
+        networks:
+            - traefik-net
+
+    app:
+        build:
+            context: ./app
+            dockerfile: Dockerfile
+        restart: unless-stopped
+        expose:
+            - 80
+        networks:
+            - traefik-net
+        labels:
+            - 'traefik.enable=true'
+            - 'traefik.http.routers.app-secure.rule=Host(`${TRAEFIK_DOMAIN}`)'
+            - 'traefik.http.routers.app-secure.tls=true'
+
+volumes:
+    acme_data:
+
+networks:
+    traefik-net:

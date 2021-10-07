@@ -1,0 +1,47 @@
+name: Deploy to test server
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        env:
+          BRANCH: "master"
+
+          DO_AUTH_TOKEN: ${{ secrets.PROD_DO_AUTH_TOKEN }}
+          TRAEFIK_DOMAIN: ${{ secrets.PROD_TRAEFIK_DOMAIN }}
+          BAUTH_USER: ${{ secrets.PROD_BAUTH_USER }}
+          BAUTH_PASS: ${{ secrets.PROD_BAUTH_PASS }}
+          ACME_EMAIL: ${{ secrets.PROD_ACME_EMAIL }}
+          TRAEFIK_PILOT_TOKEN: ${{ secrets.PROD_TRAEFIK_PILOT_TOKEN }}
+
+        with:
+          host: ${{ secrets.PROD_HOST }}
+          username: ${{ secrets.PROD_USERNAME }}
+          key: ${{ secrets.PROD_KEY }}
+          port: ${{ secrets.PROD_PORT }}
+          command_timeout: 200m
+          envs: BRANCH,DO_AUTH_TOKEN,TRAEFIK_DOMAIN,BAUTH_USER,BAUTH_PASS,ACME_EMAIL,TRAEFIK_PILOT_TOKEN
+          script: |
+            cd api
+            git config user.email "dev@vorane.com"
+            git config user.name "Vorane Studios"
+            git checkout $BRANCH            
+            git branch --set-upstream-to origin/$BRANCH
+            git pull origin $BRANCH            
+            DO_AUTH_TOKEN=$DO_AUTH_TOKEN \
+            TRAEFIK_DOMAIN=$TRAEFIK_DOMAIN \
+            BAUTH_USER=$BAUTH_USER \
+            BAUTH_PASS=$BAUTH_PASS \
+            ACME_EMAIL=$ACME_EMAIL \
+            TRAEFIK_PILOT_TOKEN=$TRAEFIK_PILOT_TOKEN \
+            docker-compose -f docker-compose.prod.yml up -d --build
