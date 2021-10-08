@@ -45,11 +45,11 @@ services:
             - default
         labels:
             - 'traefik.enable=true'
-            - 'traefik.http.routers.traefik.rule=Host(`dash.${TRAEFIK_DOMAIN}`)'
+            # - 'traefik.http.routers.traefik.rule=Host(`dash.${TRAEFIK_DOMAIN}`)'
             - 'traefik.http.routers.traefik.service=api@internal'
             - 'traefik.http.routers.traefik.tls.certresolver=basic'
             - 'traefik.http.routers.traefik.tls.domains[0].main=${TRAEFIK_DOMAIN}'
-            - 'traefik.http.routers.traefik.tls.domains[0].sans=*.${TRAEFIK_DOMAIN}'
+            # - 'traefik.http.routers.traefik.tls.domains[0].sans=*.${TRAEFIK_DOMAIN}'
             - 'traefik.http.routers.traefik.entrypoints=websecure'
             # Global redirect to https
             - 'traefik.http.routers.http-catchall.rule=hostregexp(`{host:.+}`)'
@@ -64,25 +64,25 @@ services:
             - 'traefik.http.middlewares.authtraefik.basicauth.users=${BAUTH_USER}:${BAUTH_PASS}'
 
     # IP addentifier
-    whoami:
-        image: containous/whoami
-        labels:
-            - 'traefik.enable=true'
-            # - "traefik.http.routers.whoami.middlewares=user-auth@file"
-            - 'traefik.http.routers.whoami.rule=Host(`whoami.${TRAEFIK_DOMAIN}`)'
-            - 'traefik.http.routers.whoami.tls=true'
-        networks:
-            - traefik-net
+    # whoami:
+    #     image: containous/whoami
+    #     labels:
+    #         - 'traefik.enable=true'
+    #         # - "traefik.http.routers.whoami.middlewares=user-auth@file"
+    #         - 'traefik.http.routers.whoami.rule=Host(`whoami.${TRAEFIK_DOMAIN}`)'
+    #         - 'traefik.http.routers.whoami.tls=true'
+    #     networks:
+    #         - traefik-net
 
-    # Cors
-    cors:
-        image: redocly/cors-anywhere
-        labels:
-            - 'traefik.enable=true'
-            - 'traefik.http.routers.cors.rule=Host(`cors.${TRAEFIK_DOMAIN}`)'
-            - 'traefik.http.routers.cors.tls=true'
-        networks:
-            - traefik-net
+    # # Cors
+    # cors:
+    #     image: redocly/cors-anywhere
+    #     labels:
+    #         - 'traefik.enable=true'
+    #         - 'traefik.http.routers.cors.rule=Host(`cors.${TRAEFIK_DOMAIN}`)'
+    #         - 'traefik.http.routers.cors.tls=true'
+    #     networks:
+    #         - traefik-net
 
     app:
         build:
