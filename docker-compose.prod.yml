@@ -22,7 +22,7 @@ services:
             - '--api.insecure=true'
             - '--providers.docker=true'
             - '--providers.docker.endpoint=unix:///var/run/docker.sock'
-            - '--log.level=DEBUG'
+            - '--log.level=ERROR'
             - '--certificatesresolvers.basic.acme.email=${ACME_EMAIL}'
             - '--certificatesresolvers.basic.acme.storage=le/acme.json'
             # - "--certificatesresolvers.basic.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory"
@@ -47,7 +47,7 @@ services:
             - 'traefik.http.routers.traefik.service=api@internal'
             - 'traefik.http.routers.traefik.tls.certresolver=basic'
             - 'traefik.http.routers.traefik.tls.domains[0].main=${TRAEFIK_DOMAIN}'
-            # - 'traefik.http.routers.traefik.tls.domains[0].sans=*.${TRAEFIK_DOMAIN}'
+            - 'traefik.http.routers.traefik.tls.domains[0].sans=*.${TRAEFIK_DOMAIN}'
             - 'traefik.http.routers.traefik.entrypoints=websecure'
             # Global redirect to https
             - 'traefik.http.routers.http-catchall.rule=hostregexp(`{host:.+}`)'
