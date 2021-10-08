@@ -47,7 +47,7 @@ services:
             - 'traefik.http.routers.traefik.service=api@internal'
             - 'traefik.http.routers.traefik.tls.certresolver=basic'
             - 'traefik.http.routers.traefik.tls.domains[0].main=${TRAEFIK_DOMAIN}'
-            - 'traefik.http.routers.traefik.tls.domains[0].sans=*.${TRAEFIK_DOMAIN}'
+            # - 'traefik.http.routers.traefik.tls.domains[0].sans=*.${TRAEFIK_DOMAIN}'
             - 'traefik.http.routers.traefik.entrypoints=websecure'
             # Global redirect to https
             - 'traefik.http.routers.http-catchall.rule=hostregexp(`{host:.+}`)'
