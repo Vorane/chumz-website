@@ -4412,7 +4412,7 @@ var plugins = [{
     "cache_busting_mode": "query",
     "crossOrigin": "anonymous",
     "include_favicon": true,
-    "cacheDigest": "53aa06cf17e4239d0dba6ffd09854e02"
+    "cacheDigest": "3acab30efaa1b92e1501847f20b4b24e"
   }
 }, {
   name: 'gatsby-plugin-mdx',
@@ -4426,7 +4426,7 @@ var plugins = [{
     "remarkPlugins": [],
     "rehypePlugins": [],
     "mediaTypes": ["text/markdown", "text/x-markdown"],
-    "root": "/Users/evansmunene/Projects/Chumz/chumz-website"
+    "root": "/Users/evansmunene/Projects/Chumz/chumz-website/app"
   }
 }];
 /* global plugins */
@@ -14332,24 +14332,24 @@ function y(){return(y=Object.assign||function(e){for(var t=1;t<arguments.length;
 /***/ }),
 
 /***/ "react-dom/server":
-/*!***************************************************************************************************!*\
-  !*** external "/Users/evansmunene/Projects/Chumz/chumz-website/node_modules/react-dom/server.js" ***!
-  \***************************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** external "/Users/evansmunene/Projects/Chumz/chumz-website/app/node_modules/react-dom/server.js" ***!
+  \*******************************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/Users/evansmunene/Projects/Chumz/chumz-website/node_modules/react-dom/server.js");
+module.exports = require("/Users/evansmunene/Projects/Chumz/chumz-website/app/node_modules/react-dom/server.js");
 
 /***/ }),
 
 /***/ "react":
-/*!**********************************************************************************************!*\
-  !*** external "/Users/evansmunene/Projects/Chumz/chumz-website/node_modules/react/index.js" ***!
-  \**********************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** external "/Users/evansmunene/Projects/Chumz/chumz-website/app/node_modules/react/index.js" ***!
+  \**************************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/Users/evansmunene/Projects/Chumz/chumz-website/node_modules/react/index.js");
+module.exports = require("/Users/evansmunene/Projects/Chumz/chumz-website/app/node_modules/react/index.js");
 
 /***/ }),
 

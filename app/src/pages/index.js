@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import phonebanner from '../images/phonebanner.png'
 
+import appStoreIcon from '../images/app-store.png'
 import googlePlayIcon from '../images/googleplay.png'
 import section2Image from '../images/section2image.png'
 
@@ -142,6 +143,14 @@ const Banner = ({}) => {
 		@media (min-width: 1824px) {
 		}
 	`
+	const IconsContainer = styled.div`
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	`
+	const Icon = styled.a`
+		margin: 0px 10px;
+	`
 	const BannerImage = styled.img`
 		max-height: 450px;
 		@media (min-width: 576px) {
@@ -172,15 +181,26 @@ const Banner = ({}) => {
 								<Description>
 									Building a saving culture.
 								</Description>
-								<a
-									href='https://play.google.com/store/apps/details?id=com.chumz.app'
-									className=''>
-									<img
-										alt='play store'
-										height='50'
-										src={googlePlayIcon}
-									/>
-								</a>
+								<IconsContainer>
+									<Icon
+										href='https://play.google.com/store/apps/details?id=com.chumz.app'
+										className=''>
+										<img
+											alt='play store'
+											height='50'
+											src={googlePlayIcon}
+										/>
+									</Icon>
+									<Icon
+										href='https://apps.apple.com/ke/app/chumz/id1582428475'
+										className=''>
+										<img
+											alt='Apple app store'
+											height='50'
+											src={appStoreIcon}
+										/>
+									</Icon>
+								</IconsContainer>
 							</CTA>
 						</div>
 						<div className='col-12 col-sm-6'>
