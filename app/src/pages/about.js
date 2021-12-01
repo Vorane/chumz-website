@@ -10,6 +10,7 @@ import albert from '../images/people/albert.jpg'
 import vincent from '../images/people/vincent.png'
 import timothy from '../images/people/timothy.png'
 import antonio from '../images/people/antonio.jpg'
+import patricia from "../images/people/patricia.png"
 import Layout from '../components/Layout/layout'
 
 const TeamMemberCard = styled.div`
@@ -78,6 +79,14 @@ const About = () => {
 			school: 'University of Nairobi',
 			passion: 'Building elegant software solutions for real world needs',
 			image: evans,
+		},
+		{
+			name: 'Patricia Wanjira',
+			role: 'Product Marketing ',
+			background: 'Bachelor of Commerce - Marketing',
+			school: 'University of Nairobi',
+			passion: 'Building elegant business solutions for real world needs',
+			image: patricia,
 		},
 		{
 			name: 'Timothy Guoko',

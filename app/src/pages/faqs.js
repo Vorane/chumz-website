@@ -94,7 +94,7 @@ export default function componentName() {
 
 							<Question>How secure is my money?</Question>
 							<p>
-								Chumz is regulated by the Capital Markets
+								Chumz is authorized by the Capital Markets
 								Authority,{' '}
 								<a href='https://www.cma.or.ke/index.php?option=com_content&amp;view=article&amp;id=710:press-release-cma-welcomes-two-new-firms-to-the-regulatory-sandbox&amp;catid=12&amp;Itemid=207'>
 									Press Release: CMA welcomes two new firms to
